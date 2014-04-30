@@ -1,0 +1,24 @@
+Automated generation of the wrapper around riffa2ahir interface and 
+ahir_system.vhdl to interact with ports provided 
+by riffa on a channel.
+
+Inputs -	no. of channels
+		names of i/p & o/p pipes on those channels
+		length of output data on each channel
+
+Output -	verilog file with top module named chnl_tester  (name could be changed)
+		port declaration and instantiation of riffa2ahir and ahir_system 
+		modules is done by script.
+		Uses templates that have driectives to be replaced by meaningful hdl
+
+
+Done with declaring output lengths and instantiation of 
+separate riffa2ahir interfaces on each channel.
+
+### Bug fixed : was earlier replacing the chnl_index directive by 0
+		in riffa2ahir interface in first instantiation.
+		From next_onwards, there was no directive and 0 appeared
+		everywhere. 
+		Fixed using a temporary line storing the $- so that actual
+		template data is not changed.
+

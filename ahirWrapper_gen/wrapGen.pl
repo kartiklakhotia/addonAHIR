@@ -45,6 +45,10 @@ for ($i = 0; $i < $num_chnls; $i = $i + 1)
 	print "what is the name of input pipe on chnl no. ${i}? Leave blank if there is no pipe on this port \n";
 	$in_pipe_names[$i] = <STDIN>;
 	chomp $in_pipe_names[$i];
+	if ($in_pipe_names[$i] ne $null_pipe)
+	{
+		$in_pipe_names[$i] = "dummy${i}_in";
+	}
 	print "what is the name of output pipe on chnl no. ${i}? Leave blank if there is no pipe on this port \n";
 	$out_pipe_names[$i] = <STDIN>;
 	chomp $out_pipe_names[$i];
@@ -105,18 +109,6 @@ foreach (@chnlTemp)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 sub txLenDeclare
 {
 	for ($i = 0; $i < $num_chnls; $i = $i + 1)
@@ -140,8 +132,9 @@ sub riffa2ahirInstantiate
 		my $chnlIndex = "$i";
 		foreach(@interface)
 		{
-			$_ =~ s/${chnlIndex_pat}/${chnlIndex}/g;			
-			print OUTFILE "$_\n";
+			my $toPrintLine = $_;
+			$toPrintLine =~ s/${chnlIndex_pat}/${chnlIndex}/g;			
+			print OUTFILE "$toPrintLine\n";
 		}
 	}
 }		

@@ -67,7 +67,7 @@ endgenerate;
 // CHNL_INDEX is zero indexed //
 riffa2ahir_slave #(
 .C_PCI_DATA_WIDTH(C_PCI_DATA_WIDTH),
-.TX_DATA_LEN(CHNL0OUT_DATA_LEN),
+.TX_DATA_LEN(CHNL0_OUT_DATA_LEN),
 ) interface0 (
 	.CLK(down_clk),
 	.RST(RST),
@@ -93,28 +93,28 @@ riffa2ahir_slave #(
 
 riffa2ahir_slave #(
 .C_PCI_DATA_WIDTH(C_PCI_DATA_WIDTH),
-.TX_DATA_LEN(CHNL0OUT_DATA_LEN),
-) interface0 (
+.TX_DATA_LEN(CHNL1_OUT_DATA_LEN),
+) interface1 (
 	.CLK(down_clk),
 	.RST(RST),
-	.CHNL_RX(CHNL_RX[0]),
-	.CHNL_RX_ACK(CHNL_RX_ACK[0]),			
-	.CHNL_RX_LEN(CHNL_RX_LEN[32*0 +:31]),
-	.CHNL_RX_DATA(CHNL_RX_DATA[C_PCI_WIDTH*0 +:C_PCI_WIDTH]),
-	.CHNL_RX_DATA_VALID(CHNL_RX_DATA_VALID[0]),
-	.CHNL_RX_DATA_REN(CHNL_RX_DATA_REN[0]),
-	.CHNL_TX(CHNL_TX[0]),
-	.CHNL_TX_ACK(CHNL_TX_ACK[0]),
-	.CHNL_TX_LEN(CHNL_TX_LEN[32*0 +:31]),
-	.CHNL_TX_DATA(CHNL_TX_DATA[C_PCI_WIDTH*0 +:C_PCI_WIDTH]),
-	.CHNL_TX_DATA_VALID(CHNL_TX_DATA_VALID[0]),
-	.CHNL_TX_DATA_REN(CHNL_TX_DATA_REN[0]),
-	.in_data_pipe_write_data(rData[C_PCI_WIDTH*0 +:C_PCI_WIDTH]),
-	.in_data_pipe_write_req(in_data_pipe_write_req[0]),
-	.in_data_pipe_write_ack(in_data_pipe_write_ack[0]),
-	.out_data_pipe_read_data(tData[C_PCI_WIDTH*0 +:C_PCI_WIDTH]),
-	.out_data_pipe_read_req(out_data_pipe_read_req[0]),
-	.out_data_pipe_read_ack(out_data_pipe_read_ack[0])
+	.CHNL_RX(CHNL_RX[1]),
+	.CHNL_RX_ACK(CHNL_RX_ACK[1]),			
+	.CHNL_RX_LEN(CHNL_RX_LEN[32*1 +:31]),
+	.CHNL_RX_DATA(CHNL_RX_DATA[C_PCI_WIDTH*1 +:C_PCI_WIDTH]),
+	.CHNL_RX_DATA_VALID(CHNL_RX_DATA_VALID[1]),
+	.CHNL_RX_DATA_REN(CHNL_RX_DATA_REN[1]),
+	.CHNL_TX(CHNL_TX[1]),
+	.CHNL_TX_ACK(CHNL_TX_ACK[1]),
+	.CHNL_TX_LEN(CHNL_TX_LEN[32*1 +:31]),
+	.CHNL_TX_DATA(CHNL_TX_DATA[C_PCI_WIDTH*1 +:C_PCI_WIDTH]),
+	.CHNL_TX_DATA_VALID(CHNL_TX_DATA_VALID[1]),
+	.CHNL_TX_DATA_REN(CHNL_TX_DATA_REN[1]),
+	.in_data_pipe_write_data(rData[C_PCI_WIDTH*1 +:C_PCI_WIDTH]),
+	.in_data_pipe_write_req(in_data_pipe_write_req[1]),
+	.in_data_pipe_write_ack(in_data_pipe_write_ack[1]),
+	.out_data_pipe_read_data(tData[C_PCI_WIDTH*1 +:C_PCI_WIDTH]),
+	.out_data_pipe_read_req(out_data_pipe_read_req[1]),
+	.out_data_pipe_read_ack(out_data_pipe_read_ack[1])
 );
 
 

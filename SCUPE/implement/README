@@ -1,0 +1,7 @@
+getPackage
+cleanup
+synthesis
+ngdbuild
+map
+
+all are commented. Checking par for now. 

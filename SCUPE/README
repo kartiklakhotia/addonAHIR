@@ -1,0 +1,35 @@
+This framework integrates the Ethernet and PCIe core provided by Xilinx.
+
+ETHERNET :
+Core version 1.6
+
+PCIe :
+Core version 2.5
+Using package RIFFA 2.0.2 for PCIe transmission.
+
+USAGE :
+
+For using this framework, you need to look at following files and directories :
+
+(a) "user" directory : Put all your VHDL or verilog files for your design in here. This directory is to host the design that is built over this framework.
+By default it has 2 files -
+	(i) "chnl_tester.v" - a verilog module built over RIFFA for testing all the channels. Current design has 4 channels. It just loops back the number of words being sent over a transaction
+	(ii) "address_swap_module_8.vhd" - a VHDL module built over ethernet. It loops back whatever packet is sent to board over ethernet, with the source and destination addresses swapped.
+The demo files will also be helpful in understanding the interfaces of both PCIe and ethernet.
+
+
+(b) "topModules" directory : This has 4 files, all top level modules in corresponding design trees -
+	(i) "FWtop.vhd" - the topmost in design heirarchy. Instantiates both ethernet and PCIe components. If you are putting something else other than ethernet and PCIe, you need to instantiate those designs in this file.
+	(ii) "v6_emac_v1_6_example_design.vhd" - topmost module for the ethernet block. Instantiates the locallink (that has ethernet core), the clocking wizard for appropriate clock supply to ethernet core and the address swap modulle. Comment component and instance of address swap module and instantiate the Design that you want to put at the back of ethernet interface. Source files of your desing should reside in "user" directory.  
+	(iii) "riffa_top_v6_pcie_v2_5.v" - topmost verilog module for riffa. Instantiates the PCIe core and the Riffa adapter module. User doesn't need to make any alteration to this.
+	(iv) "riffa_adapter_v6_pcie_v2_5.v" - riffa adapter module(verilog). Instantiates Riffa Endpoint design, which is essentially a PCIe endpoint, and the Channel tester module on every channel. You need to comment out channel tester module and put instantiation of the module that you want to build on the PCIe interface. Source files of the design should be put in "user" directory. 
+
+(c) "xcf" directory : It has a "design.xcf" file which specifies timing constraints that the Synthesis tool (xst in our case) should take care of. If you want to introduce any constraint, that should be done in the same file.
+
+(d) "ucf" directory : It has a "design.ucf" which specifies all user constraintss that the Mapping and PAR tool will consider. It specifies allocation of Nets and buffers, timing constraints etc. If you want to introduce any new constraint or allocation, it should be done in the same file.
+
+(e) "implement" directory : Hosts the "bitgen.pl" file. Running this file will generate a bitfile for the complete design. To run this, type - "xilperl bitgen.pl". You will find 2 sub-directories here - 
+	(i) "xst" - Has the scr and prj files. "fl.prj" has the names of default files excluding those in "user" directory. After running the script, an "flFinal.prj" file will be generated which lists all the files (including those in "user" directory) with their type (vhdl/verilog) and the working library ("work" by default). The "xst.scr" has some options specified for synthesis tool. These are recommended options for a design with PCIe and ethernet. However, you can change them as you may wish.
+	(ii) "results" - Will be generated after the script is run. Contains all reports, files generated after every stage of implementation (synthesis, build, map, par, trce) and the final "routed.bit" file. Run impact and load the "routed.bit" file to play along with your design.
+
+You will see some other directories and files in the package as well. The user doesn't need to look into them or alter them. Let them be as it is.

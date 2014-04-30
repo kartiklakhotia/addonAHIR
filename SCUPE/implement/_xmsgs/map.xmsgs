@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Map" num="284" delta="old" >Map is running with the multi-threading option on. Map currently supports the use of up to 2 processors. Based on the the user options and machine load, Map will use 2 processors during this run.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core/axi_basic_top_i/tx_inst/tx_pipeline_inst/reg_tuser_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core/axi_basic_top_i/tx_inst/xhdl12.tx_thrl_ctl_inst/reg_tcfg_gnt&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/reader/rMainState_FSM_FFd6_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/reader/rMainState_FSM_FFd6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntOr_group_87.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_0_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntOr_group_87.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_5605.phi/ack_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_5605.phi/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_5605.phi/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/reader/rRxState_FSM_FFd7_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/reader/rRxState_FSM_FFd7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/unload_ack_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/unload_ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/requesterMux/rAck_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/requesterMux/rAck&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_4922.phi/ack_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_4922.phi/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.MUX_5527_inst_block.MUX_5527_inst/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.MUX_5527_inst_block.MUX_5527_inst/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.MUX_5527_inst_block.MUX_5527_inst/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/QRSFilt_instance/data_path.LoadGroup1.LoadReq/TstampGen.Tsb.tsc/counter_sig_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/QRSFilt_instance/data_path.LoadGroup1.LoadReq/TstampGen.Tsb.tsc/counter_sig_0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4193_inst_block.type_cast_4193_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4193_inst_block.type_cast_4193_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_5110_branch.branch_instance/ack1_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_5110_branch.branch_instance/ack1_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_5110_branch.branch_instance/ack1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5542_inst_block.type_cast_5542_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5542_inst_block.type_cast_5542_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5542_inst_block.type_cast_5542_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/QRSFilt_instance/data_path.LoadGroup1.LoadReq/TstampGen.Tsb.tsc/counter_sig_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/QRSFilt_instance/data_path.LoadGroup1.LoadReq/TstampGen.Tsb.tsc/counter_sig_1_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/in_buffer/unload_ack_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/in_buffer/unload_ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/in_buffer/unload_ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/divideSigned_instance/data_path.type_cast_241_inst_block.type_cast_241_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/divideSigned_instance/data_path.type_cast_241_inst_block.type_cast_241_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/endpoint/endpoint64.endpoint/channels[0].channel/txPort/writer/rMainState_FSM_FFd7_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/endpoint/endpoint64.endpoint/channels[0].channel/txPort/writer/rMainState_FSM_FFd7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/QRSFilt_instance/data_path.LoadGroup1.LoadReq/TstampGen.Tsb.tsc/counter_sig_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/QRSFilt_instance/data_path.LoadGroup1.LoadReq/TstampGen.Tsb.tsc/counter_sig_2_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4982_inst_block.type_cast_4982_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4982_inst_block.type_cast_4982_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_3&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4982_inst_block.type_cast_4982_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4982_inst_block.type_cast_4982_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4982_inst_block.type_cast_4982_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_63</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">32 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_62&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_61&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_60&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_59&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_58&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_57&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_56&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_55&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_54&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_53&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_52&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_51&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_50&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_49&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_48&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_47&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_46&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_45&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_44&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_43&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_42&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_41&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_40&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_39&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_38&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_37&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_36&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_35&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_34&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_33&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_32&gt; &lt;app/detector_instance/logic_block/det_output_pipe_Pipe/Shallow.queue/queue_array_0_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4984_inst_block.type_cast_4984_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4984_inst_block.type_cast_4984_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4984_inst_block.type_cast_4984_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4984_inst_block.type_cast_4984_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_3521_inst_block.type_cast_3521_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_3521_inst_block.type_cast_3521_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_4&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_3521_inst_block.type_cast_3521_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_3&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_3521_inst_block.type_cast_3521_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_3521_inst_block.type_cast_3521_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_3521_inst_block.type_cast_3521_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/endpoint/endpoint64.endpoint/txEng/lower/rFifoRenIssued_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/endpoint/endpoint64.endpoint/txEng/lower/rFifoRenIssued_1&gt; &lt;app/endpoint/endpoint64.endpoint/txEng/lower/rFifoRenIssued&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntAdd_group_7.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntAdd_group_7.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntAdd_group_7.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntAdd_group_7.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4142_branch.branch_instance/ack0_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4142_branch.branch_instance/ack0_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4142_branch.branch_instance/ack0_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4142_branch.branch_instance/ack0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.OutportGroup0.det_output_pipe_write_0/BufGen[0].rxB/update_fsm_state_FSM_FFd1_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.OutportGroup0.det_output_pipe_write_0/BufGen[0].rxB/update_fsm_state_FSM_FFd1_4&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.OutportGroup0.det_output_pipe_write_0/BufGen[0].rxB/update_fsm_state_FSM_FFd1_3&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.OutportGroup0.det_output_pipe_write_0/BufGen[0].rxB/update_fsm_state_FSM_FFd1_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.OutportGroup0.det_output_pipe_write_0/BufGen[0].rxB/update_fsm_state_FSM_FFd1_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.OutportGroup0.det_output_pipe_write_0/BufGen[0].rxB/update_fsm_state_FSM_FFd1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4303_branch.branch_instance/ack0_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4303_branch.branch_instance/ack0_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4303_branch.branch_instance/ack0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_6&gt; &lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_5&gt; &lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_4&gt; &lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_3&gt; &lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_2&gt; &lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst_1&gt; &lt;app/endpoint/endpoint64.endpoint/channels[0].channel/rxPort/rRst&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_5196_branch.branch_instance/ack1_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_5196_branch.branch_instance/ack1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4986_inst_block.type_cast_4986_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4986_inst_block.type_cast_4986_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4986_inst_block.type_cast_4986_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4986_inst_block.type_cast_4986_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.LoadGroup2.LoadReq/TstampGen.Tsb.tsc/counter_sig_0_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.LoadGroup2.LoadReq/TstampGen.Tsb.tsc/counter_sig_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/initFilt_instance/in_buffer/unload_ack</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/initFilt_instance/in_buffer/unload_ack_1&gt; &lt;app/detector_instance/logic_block/initFilt_instance/in_buffer/unload_ack_2&gt; &lt;app/detector_instance/logic_block/initFilt_instance/in_buffer/unload_ack_3&gt; &lt;app/detector_instance/logic_block/initFilt_instance/in_buffer/unload_ack_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5540_inst_block.type_cast_5540_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5540_inst_block.type_cast_5540_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5540_inst_block.type_cast_5540_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_3910.phi/ack_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.phi_stmt_3910.phi/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4313_inst_block.type_cast_4313_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4313_inst_block.type_cast_4313_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack_1&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4313_inst_block.type_cast_4313_inst/NoFlowThrough.bufEqOne.regBlock.reg/ack&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntEq_group_71.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_0_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.ApIntEq_group_71.UnsharedOperator/noFlowThrough.ilb/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4303_branch.branch_instance/ack1_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.if_stmt_4303_branch.branch_instance/ack1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/bufPipe/Shallow.queue/queue_array_0_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/output_register_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/output_register_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/output_register_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[4].BufBlock.ub/output_register_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/output_register_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/output_register_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/output_register_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[3].BufBlock.ub/output_register_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/output_register_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/output_register_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/output_register_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[2].BufBlock.ub/output_register_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/output_register_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/output_register_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/output_register_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[1].BufBlock.ub/output_register_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/output_register_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/output_register_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/output_register_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.meanCalc_call_group_2.CallComplete/bufGen[0].BufBlock.ub/output_register_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4165_inst_block.type_cast_4165_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4165_inst_block.type_cast_4165_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_25&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4165_inst_block.type_cast_4165_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_26&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4165_inst_block.type_cast_4165_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4584_inst_block.type_cast_4584_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4584_inst_block.type_cast_4584_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4584_inst_block.type_cast_4584_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4584_inst_block.type_cast_4584_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4845_inst_block.type_cast_4845_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4845_inst_block.type_cast_4845_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_28&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4845_inst_block.type_cast_4845_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4845_inst_block.type_cast_4845_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5026_inst_block.type_cast_5026_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5026_inst_block.type_cast_5026_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5026_inst_block.type_cast_5026_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5026_inst_block.type_cast_5026_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5506_inst_block.type_cast_5506_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5506_inst_block.type_cast_5506_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5506_inst_block.type_cast_5506_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_5506_inst_block.type_cast_5506_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4875_inst_block.type_cast_4875_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">riffa_top_v6_pcie_v2_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4875_inst_block.type_cast_4875_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_29&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4875_inst_block.type_cast_4875_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_30&gt; &lt;app/detector_instance/logic_block/qrsDet_instance/data_path.type_cast_4875_inst_block.type_cast_4875_inst/NoFlowThrough.bufEqOne.regBlock.reg/out_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">user_lnk_up_n_int_i/Q</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">user_lnk_up_n_int_i/N1</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">user_reset_n_i/Q</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">user_reset_n_i/N1</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[0].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[0].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[1].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[1].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[2].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[2].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[3].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_rx/brams[3].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[0].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[0].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[1].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[1].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[2].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[2].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[3].ram/use_ramb36_2.ramb36_i/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">core/pcie_2_0_i/pcie_bram_i/pcie_brams_tx/brams[3].ram/use_ramb36_2.ramb36_i/N3</arg> has no load.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="warning" file="MapLib" num="41" delta="old" >All members of TNM group &quot;<arg fmt="%s" index="1">FFS(user_reset_n_i)</arg>&quot; have been optimized out of the design.
+</msg>
+
+<msg type="warning" file="MapLib" num="48" delta="old" >The timing specification &quot;<arg fmt="%s" index="1">TS_RESETN</arg>&quot; has been discarded because its <arg fmt="%s" index="2">TO</arg> group (<arg fmt="%s" index="3">FFS(user_reset_n_i)</arg>) was optimized away.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">0.950</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.950</arg> to <arg fmt="%0.3f" index="3">1.050</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">lut244756_72706</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">lut252334_74576</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+</messages>
+

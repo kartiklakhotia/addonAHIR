@@ -1,0 +1,16 @@
+#ethernet
+#top module
+vhdl work ../topModules/v6_emac_v1_6_example_design.vhd
+
+#source
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/v6_emac_v1_6.vhd
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/physical/gmii_if.vhd
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/v6_emac_v1_6_block.vhd
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/client/fifo/tx_client_fifo_8.vhd
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/client/fifo/rx_client_fifo_8.vhd
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/client/fifo/eth_fifo_8.vhd
+vhdl work ../ipcore_dir/v6_emac_v1_6/example_design/v6_emac_v1_6_locallink.vhd
+
+#clocking
+
+vhdl work ../ipcore_dir/clk_wiz_v3_6.vhd

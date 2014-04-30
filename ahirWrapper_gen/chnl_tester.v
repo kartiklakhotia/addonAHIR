@@ -121,3 +121,17 @@ riffa2ahir_slave #(
 //replace in_pipe_name with different input_pipe_names
 //replace out_pipe_name with different output_pipe_names
 //repeat instantiation of single data/req/ack pair for both rx and tx with different chnl_index numbers
+ahir_system logic_block(
+	.clk(down_clk),
+	.reset(RST),
+	// pipe_signals_start
+	.out0_pipe_read_data(tData[C_PCI_WIDTH*0 +:C_PCI_WIDTH]),
+	.out0_pipe_read_req(out_data_pipe_read_req[0]), 
+	.out0_pipe_read_ack(out_data_pipe_read_ack[0]) ,
+	.in1_pipe_write_data(rData[C_PCI_WIDTH*1 +:C_PCI_WIDTH]),
+	.in1_pipe_write_req(in_data_pipe_write_req[1]), 
+	.in1_pipe_write_ack(in_data_pipe_write_ack[1]), 
+	// pipe_signals_end
+);	
+
+endmodule;

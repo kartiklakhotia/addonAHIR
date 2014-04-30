@@ -13,15 +13,17 @@ my $templateDir = "templates";
 $opFile = "chnl_tester.v";
 $chnlTemplate = "${templateDir}${l}chnl_wrapper.v";
 $riffa2ahirTemplate = "${templateDir}${l}riffa2ahir_inst.v";
-$ahirTemplate = "${templateDir}${l}ahir_system_inst.v";
+$ahirTemplate = "${templateDir}${l}ahirPorts_inst.v";
 
 
 ########## string patterns ##########
 $riffa2ahir_pat = "__riffa2ahir_slave_instance";
-$ahirSys_pat = "__ahir_system_instance";
-$null_pipe = "";
+$ahirSys_pat = "__ahirSys_port_declaration";
+$null_pat = "";
 $txLen_pat = "__out_length_parameter_declaration";
 $chnlIndex_pat = "__CHNL_INDEX__";
+$inPipe_pat = "__in_pipe_name__";
+$outPipe_pat = "__out_pipe_name__";
 
 ### create blank chnl_tester file to write on ###
 system("$remove $force $opFile");
@@ -45,14 +47,14 @@ for ($i = 0; $i < $num_chnls; $i = $i + 1)
 	print "what is the name of input pipe on chnl no. ${i}? Leave blank if there is no pipe on this port \n";
 	$in_pipe_names[$i] = <STDIN>;
 	chomp $in_pipe_names[$i];
-	if ($in_pipe_names[$i] ne $null_pipe)
-	{
-		$in_pipe_names[$i] = "dummy${i}_in";
-	}
+#	if ($in_pipe_names[$i] eq $null_pat)
+#	{
+#		$in_pipe_names[$i] = "dummy${i}_in";
+#	}
 	print "what is the name of output pipe on chnl no. ${i}? Leave blank if there is no pipe on this port \n";
 	$out_pipe_names[$i] = <STDIN>;
 	chomp $out_pipe_names[$i];
-	if ($out_pipe_names[$i] ne $null_pipe)
+	if ($out_pipe_names[$i] ne $null_pat)
 	{
 		print "enter the length of data to be transmitted on pipe $out_pipe_names[$i]\n";
 		$out_data_len[$i] = <STDIN>;
@@ -60,7 +62,7 @@ for ($i = 0; $i < $num_chnls; $i = $i + 1)
 	}
 	else
 	{
-		$out_pipe_names[$i] = "dummy${i}_out";
+#		$out_pipe_names[$i] = "dummy${i}_out";
 		$out_data_len[$i] = "0";
 	}
 }
@@ -73,10 +75,12 @@ open(INFILE3, "<", $ahirTemplate) or die ("cannot open ${ahirTemplate} : $!\n");
 @ahirSys = <INFILE3>;
 chomp @chnlTemp;
 chomp @interface;
+chomp @ahirSys;
 close(INFILE1);
 close(INFILE2);
 close(INFILE3);
-
+$numPorts = @ahirSys;
+&removeFalsePorts;
 
 open(OUTFILE, ">>", $opFile) or die ("cannot open ${opFile} : $!\n");; 
 
@@ -90,14 +94,13 @@ foreach (@chnlTemp)
 	{
 		&txLenDeclare;
 	}
-			
 	elsif ($s eq $riffa2ahir_pat)
 	{
 		&riffa2ahirInstantiate;	
 	}
 	elsif ($s eq $ahirSys_pat)
 	{
-		last;
+		&ahirSysInstantiate;
 	}
 	else
 	{
@@ -138,3 +141,56 @@ sub riffa2ahirInstantiate
 		}
 	}
 }		
+
+sub ahirSysInstantiate
+{
+	for ($i = 0; $i < $num_chnls; $i = $i + 1)
+	{
+		my $chnlIndex = "$i";
+		my $portCount = 0;
+		foreach(@ahirSys)
+		{
+			$portCount = $portCount + 1;
+			my $toPrintLine = $_;
+			if (($toPrintLine =~ /${inPipe_pat}/) && ($in_pipe_names[$i] eq $null_pat)){;}
+			elsif (($toPrintLine =~ /${outPipe_pat}/) && ($out_pipe_names[$i] eq $null_pat)){;}
+			else
+			{
+				$toPrintLine =~ s/${inPipe_pat}/$in_pipe_names[$i]/g;
+				$toPrintLine =~ s/${outPipe_pat}/$out_pipe_names[$i]/g;
+				$toPrintLine =~ s/${chnlIndex_pat}/${chnlIndex}/g;			
+				print OUTFILE "$toPrintLine";
+				if ($portCount == $numPorts)
+				{
+					if ($i == $num_chnls - 1)
+					{
+						print OUTFILE "\n";
+					}
+					else
+					{
+						print OUTFILE ",\n";
+					}
+				}
+				else
+				{
+					print OUTFILE "\n";
+				}
+			}
+		}		
+	}
+}	
+
+sub removeFalsePorts
+{
+	for ($i=0; $i < $numPorts; $i = $i + 1)
+	{
+		my $s = $ahirSys[$i];
+		$s =~ s/\s+//g;
+		if ($s eq $null_pat)
+		{
+			splice(@ahirSys, $i,  1);
+			$i = $i - 1;	 
+			$numPorts = $numPorts - 1;
+		}
+	}
+}

@@ -69,6 +69,12 @@ __riffa2ahir_slave_instance
 //replace in_pipe_name with different input_pipe_names
 //replace out_pipe_name with different output_pipe_names
 //repeat instantiation of single data/req/ack pair for both rx and tx with different chnl_index numbers
-__ahir_system_instance
+ahir_system logic_block(
+	.clk(down_clk),
+	.reset(RST),
+	// pipe_signals_start
+	__ahirSys_port_declaration
+	// pipe_signals_end
+);	
 
 endmodule;

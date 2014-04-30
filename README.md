@@ -13,3 +13,4 @@ then create and compile hardware testbench
 
 
 prj generation complete. Trying hand at better organization.
+ahirWrapper_gen complete.

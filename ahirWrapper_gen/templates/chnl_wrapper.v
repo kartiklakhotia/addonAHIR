@@ -2,36 +2,39 @@
 
 module chnl_tester #(
 	parameter C_PCI_DATA_WIDTH = 9'd32,
+	parameter C_NUM_CHNL = 4'd1,
 // local or lower level module parameters //
 // declare this parameter for multiple values of CHNL_INDEX //
-	parameter OUT_CHNL_INDEX_DATA_LEN = 32'd2
+	__out_length_parameter_declaration
 )
 (
 	input CLK,
 	input down_clk,
 	input RST,
-///////////////// CHANNEL 0 /////////////////
+///////////////// ALL CHANNELS /////////////////
 	//////// Rx PORT //////
 
-	output CHNL_RX_CLK, 
-	input CHNL_RX, 
-	output CHNL_RX_ACK, 
-	input CHNL_RX_LAST, 
-	input [31:0] CHNL_RX_LEN, 
-	input [30:0] CHNL_RX_OFF, 
-	input [C_PCI_DATA_WIDTH-1:0] CHNL_RX_DATA, 
-	input CHNL_RX_DATA_VALID, 
-	output CHNL_RX_DATA_REN,
+	output [C_NUM_CHNL-1:0] CHNL_RX_CLK, 
+	input [C_NUM_CHNL-1:0] CHNL_RX, 
+	output [C_NUM_CHNL-1:0] CHNL_RX_ACK, 
+	input [C_NUM_CHNL-1:0] CHNL_RX_LAST, 
+	input [(C_NUM_CHNL*32)-1:0] CHNL_RX_LEN, 
+	input [(C_NUM_CHNL*31)-1:0] CHNL_RX_OFF, 
+	input [(C_PCI_DATA_WIDTH*C_NUM_CHNL)-1:0] CHNL_RX_DATA, 
+	input [C_NUM_CHNL-1:0] CHNL_RX_DATA_VALID, 
+	output [C_NUM_CHNL-1:0] CHNL_RX_DATA_REN,
 	
-	output CHNL_TX_CLK, 
-	output CHNL_TX, 
-	input CHNL_TX_ACK, 
-	output CHNL_TX_LAST, 
-	output [31:0] CHNL_TX_LEN, 
-	output [30:0] CHNL_TX_OFF, 
-	output [C_PCI_DATA_WIDTH-1:0] CHNL_TX_DATA, 
-	output CHNL_TX_DATA_VALID, 
-	input CHNL_TX_DATA_REN
+	//////// Tx PORT //////
+
+	output [C_NUM_CHNL-1:0] CHNL_TX_CLK, 
+	output [C_NUM_CHNL-1:0] CHNL_TX, 
+	input [C_NUM_CHNL-1:0] CHNL_TX_ACK, 
+	output [C_NUM_CHNL-1:0] CHNL_TX_LAST, 
+	output [(C_NUM_CHNL*32)-1:0] CHNL_TX_LEN, 
+	output [(C_NUM_CHNL*31)-1:0] CHNL_TX_OFF, 
+	output [(C_PCI_DATA_WIDTH*C_NUM_CHNL)-1:0] CHNL_TX_DATA, 
+	output [C_NUM_CHNL-1:0] CHNL_TX_DATA_VALID, 
+	input [C_NUM_CHNL-1:0] CHNL_TX_DATA_REN
 );
 
 

@@ -77,4 +77,4 @@ ahir_system logic_block(
 	// pipe_signals_end
 );	
 
-endmodule;
+endmodule

@@ -47,10 +47,6 @@ for ($i = 0; $i < $num_chnls; $i = $i + 1)
 	print "what is the name of input pipe on chnl no. ${i}? Leave blank if there is no pipe on this port \n";
 	$in_pipe_names[$i] = <STDIN>;
 	chomp $in_pipe_names[$i];
-#	if ($in_pipe_names[$i] eq $null_pat)
-#	{
-#		$in_pipe_names[$i] = "dummy${i}_in";
-#	}
 	print "what is the name of output pipe on chnl no. ${i}? Leave blank if there is no pipe on this port \n";
 	$out_pipe_names[$i] = <STDIN>;
 	chomp $out_pipe_names[$i];
@@ -62,7 +58,6 @@ for ($i = 0; $i < $num_chnls; $i = $i + 1)
 	}
 	else
 	{
-#		$out_pipe_names[$i] = "dummy${i}_out";
 		$out_data_len[$i] = "0";
 	}
 }

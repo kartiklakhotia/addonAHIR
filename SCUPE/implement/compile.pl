@@ -257,7 +257,7 @@ system("$remove $force *.lst");
 system("$remove $force *.lso");
 system("$remove $force *.ngr");
 system("$remove $force _ngo");
-system("$remove $force xlnx_auto_0_xdb")
+system("$remove $force xlnx_auto_0_xdb");
 system("$remove $force ${xstdir}${l}dump.xst"); 
 system("$remove $force ${xstdir}${l}work"); 
 system("$remove $force ${xstdir}${l}ahir"); 

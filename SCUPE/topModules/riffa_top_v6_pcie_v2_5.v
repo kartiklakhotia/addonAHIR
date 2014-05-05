@@ -53,6 +53,7 @@
 module riffa_top_v6_pcie_v2_5 # (
   parameter        PL_FAST_TRAIN        = "FALSE",
   parameter C_DATA_WIDTH = 64,            // RX/TX interface data width
+  parameter pcie_usr_clk_div = 4,
   // Do not override parameters below this line
   parameter KEEP_WIDTH = C_DATA_WIDTH / 8               // KEEP width
 )
@@ -217,7 +218,7 @@ FDCP #(
 
 );
 
-v6_pcie_v2_5 
+v6_pcie_v2_5 #(.usr_clk_div(pcie_usr_clk_div)) 
  core (
 
   //-------------------------------------------------------

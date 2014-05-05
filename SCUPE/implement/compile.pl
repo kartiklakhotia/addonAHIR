@@ -146,7 +146,7 @@ sub run_ngdbuild
 {
   print ("\nStarting NGDBUILD\n");
 
-  $command = "ngdbuild $NGDBUILD_OPTIONS -uc $NGDBUILD_UCF -sd ${dir}${l}..${l}..${l}..${l} ${dir}${l}results${l}design.ngc";
+  $command = "ngdbuild $NGDBUILD_OPTIONS -uc $NGDBUILD_UCF -sd ${dir} ${dir}${l}results${l}design.ngc";
   print ("$command\n");
   $status = 0;
   $status = system ("$command");

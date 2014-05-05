@@ -110,6 +110,9 @@ use ieee.std_logic_1164.all;
 -------------------------------------------------------------------------------
 
 entity v6_emac_v1_6_example_design is
+   generic (
+	eth_usr_clk_div	: integer := 8 
+   );
    port(
 
       -- Client receiver interface
@@ -163,6 +166,10 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
   -- Component declaration for the LocalLink-level EMAC wrapper
  
 	 component clk_wiz_v3_6 is
+	generic
+	(
+	usr_clk_div : integer := 8
+	);	
 	port
 	(-- Clock in ports
 	CLK_IN1_P         : in     std_logic;
@@ -170,6 +177,7 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
 	-- Clock out ports
 	CLK_OUT1          : out    std_logic;
 	CLK_OUT2          : out    std_logic;
+	CLK_OUT3	  : out	   std_logic;
 	-- Status and control signals
 	RESET             : in     std_logic;
 	LOCKED            : out    std_logic
@@ -243,7 +251,9 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
    --  Component Declaration for address swapping module
    component address_swap_module_8
    port (
-      rx_ll_clock         : in  std_logic;
+      rx_usr_clock	  : in  std_logic;
+      rx_gtx_clock	  : in  std_logic;
+      ll_clk_i	          : out std_logic;
       rx_ll_reset         : in  std_logic;
       rx_ll_data_in       : in  std_logic_vector(7 downto 0);
       rx_ll_sof_in_n      : in  std_logic;
@@ -268,6 +278,7 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
 
     -- LocalLink interface clocking signal
     signal ll_clk_i            : std_logic;
+
 
 	-- REFCLK and GTXCLK ------
 	signal GTX_CLK 				: std_logic;
@@ -304,6 +315,13 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
 
     attribute keep : boolean;
     attribute keep of tx_clk : signal is true;
+
+    -- user hardware clocking signal
+    signal usr_clk	       : std_logic;
+    signal usr_clk_prebuf      : std_logic;
+
+    attribute keep of usr_clk : signal is true;
+
 
     signal rx_clk_i            : std_logic;
     signal gmii_rx_clk_bufio   : std_logic;
@@ -348,6 +366,8 @@ begin
 
 
 	clk_wiz : clk_wiz_v3_6
+  generic map
+    (usr_clk_div => eth_usr_clk_div)
   port map
    (-- Clock in ports
     CLK_IN1_P => SYSCLK_P,
@@ -355,6 +375,7 @@ begin
     -- Clock out ports
     CLK_OUT1           => GTX_CLK,
     CLK_OUT2           => REFCLK,
+    CLK_OUT3	       => usr_clk_prebuf,
     -- Status and control signals
     RESET              => reset_i,
     LOCKED             => locked);
@@ -408,6 +429,10 @@ begin
       O => tx_clk
     );
 
+    bufg_usr : BUFG port map (
+      I => usr_clk_prebuf,
+      o => usr_clk
+    );
     -- Use a low-skew BUFIO on the delayed RX_CLK, which will be used in the
     -- GMII phyical interface block to capture incoming data and control.
     bufio_rx : BUFIO port map (
@@ -424,9 +449,6 @@ begin
       CLR => '0'
     );
 
-    -- Clock the LocalLink interface with the globally-buffered
-    -- GTX reference clock
-    ll_clk_i <= tx_clk;
 
     ------------------------------------------------------------------------
     -- Instantiate the LocalLink-level EMAC Wrapper (v6_emac_v1_6_locallink.vhd)
@@ -497,7 +519,9 @@ begin
     --  Instatiate the address swapping module
     ---------------------------------------------------------------------
     client_side_asm : address_swap_module_8 port map (
-      rx_ll_clock         => ll_clk_i,
+      rx_usr_clock        => usr_clk,
+      rx_gtx_clock	  => tx_clk,
+      ll_clk_i		  => ll_clk_i,
       rx_ll_reset         => ll_reset_i,
       rx_ll_data_in       => rx_ll_data_i,
       rx_ll_sof_in_n      => rx_ll_sof_n_i,

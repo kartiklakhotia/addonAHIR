@@ -91,5 +91,6 @@ vhdl work ../ipcore_dir/v6_pcie_v2_5/source/v6_pcie_v2_5.vhd
 verilog work ../ipcore_dir/v6_pcie_v2_5/source/tx_engine_64.v 
 verilog work ../ipcore_dir/v6_pcie_v2_5/source/rx_port_64.v 
 verilog work ../ipcore_dir/v6_pcie_v2_5/source/tx_port_channel_gate_32.v 
+verilog work ../ipcore_dir/v6_pcie_v2_5/source/riffa2ahir.v 
 vhdl work ../ipcore_dir/v6_pcie_v2_5/source/pcie_upconfig_fix_3451_v6.vhd 
 verilog work ../ipcore_dir/v6_pcie_v2_5/source/fifo_packer_128.v 

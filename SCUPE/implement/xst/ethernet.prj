@@ -1,6 +1,6 @@
 #ahir and ahir_ieee_proposed libraries
-vhdl ahir /home/ahir/ahir/release/vhdl/ahir.vhdl
-vhdl ahir_ieee_proposed /home/ahir/ahir/release/vhdl/aHiR_ieee_proposed.vhdl
+vhdl ahir ../ipcore_dir/ahir/ahir.vhdl
+vhdl ahir_ieee_proposed ../ipcore_dir/ahir_ieee_proposed/aHiR_ieee_proposed.vhdl
 
 
 #ethernet
@@ -18,4 +18,4 @@ vhdl work ../ipcore_dir/v6_emac_v1_6/source/v6_emac_v1_6_locallink.vhd
 
 #clocking
 
-vhdl work ../ipcore_dir/clk_wiz_v3_6.vhd
+vhdl work ../ipcore_dir/v6_clk_wiz_v3_6/clk_wiz_v3_6.vhd

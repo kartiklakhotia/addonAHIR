@@ -359,7 +359,10 @@ riffa_endpoint #(
 // do the same. You should feel free to manually instantiate
 // your custom IP cores here and remove the code below.
 
-		chnl_tester #(C_DATA_WIDTH) detector_instance (
+		chnl_tester #(
+			.C_PCI_DATA_WIDTH(C_DATA_WIDTH),
+			.C_NUM_CHNL(C_NUM_CHNL)
+		) hw_instance (
 			.CLK(user_clk),
 			.down_clk(down_clk),
 			.RST(riffa_reset),	// riffa_reset includes riffa_endpoint resets

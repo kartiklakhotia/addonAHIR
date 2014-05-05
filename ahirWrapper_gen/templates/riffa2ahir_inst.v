@@ -1,4 +1,4 @@
-riffa2ahir_slave #(
+riffa2ahir #(
 .C_PCI_DATA_WIDTH(C_PCI_DATA_WIDTH),
 .TX_DATA_LEN(CHNL__CHNL_INDEX___OUT_DATA_LEN)
 ) interface__CHNL_INDEX__ (

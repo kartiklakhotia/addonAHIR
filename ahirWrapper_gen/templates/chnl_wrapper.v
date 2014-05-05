@@ -64,7 +64,7 @@ endgenerate;
 // create multiple instantiation in a fashion similar as below //
 // in each instance, replace CHNL_INDEX with the chnl no.//
 // CHNL_INDEX is zero indexed //
-__riffa2ahir_slave_instance
+__riffa2ahir_instance
 
 //replace in_pipe_name with different input_pipe_names
 //replace out_pipe_name with different output_pipe_names

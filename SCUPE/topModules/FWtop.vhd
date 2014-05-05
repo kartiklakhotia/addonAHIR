@@ -49,8 +49,6 @@ port(
       CLIENTEMACPAUSEREQ       : in  std_logic;
       CLIENTEMACPAUSEVAL       : in  std_logic_vector(15 downto 0);
 
-      -- Clock Signal
-      --GTX_CLK                  : in  std_logic;
 
       -- GMII Interface
       GMII_TXD                 : out std_logic_vector(7 downto 0);
@@ -64,9 +62,7 @@ port(
 
 
 		
-      -- Reference clock for IODELAYs
-      --REFCLK                   : in  std_logic;
-		SYSCLK_N, SYSCLK_P : in std_logic ;
+      SYSCLK_N, SYSCLK_P : in std_logic ;
         
       PHY_RESET : out std_logic ;
       -- Asynchronous reset
@@ -105,8 +101,6 @@ component v6_emac_v1_6_example_design is
       CLIENTEMACPAUSEREQ       : in  std_logic;
       CLIENTEMACPAUSEVAL       : in  std_logic_vector(15 downto 0);
 
-      -- Clock Signal
-      --GTX_CLK                  : in  std_logic;
 
       -- GMII Interface
       GMII_TXD                 : out std_logic_vector(7 downto 0);
@@ -120,9 +114,7 @@ component v6_emac_v1_6_example_design is
 
 
 		
-      -- Reference clock for IODELAYs
-      --REFCLK                   : in  std_logic;
-		SYSCLK_N, SYSCLK_P : in std_logic ;
+      SYSCLK_N, SYSCLK_P : in std_logic ;
         
       PHY_RESET : out std_logic ;
       -- Asynchronous reset
@@ -170,8 +162,6 @@ v6_emac_inst : v6_emac_v1_6_example_design
       CLIENTEMACPAUSEREQ    => CLIENTEMACPAUSEREQ,
       CLIENTEMACPAUSEVAL   => CLIENTEMACPAUSEVAL,
 
-      -- Clock Signal
-      --GTX_CLK                  : in  std_logic;
 
       -- GMII Interface
       GMII_TXD               => GMII_TXD,
@@ -185,10 +175,8 @@ v6_emac_inst : v6_emac_v1_6_example_design
 
 
 		
-      -- Reference clock for IODELAYs
-      --REFCLK                   : in  std_logic;
-	SYSCLK_N		=> SYSCLK_N, 
-	SYSCLK_P 		=> SYSCLK_P,
+      SYSCLK_N		=> SYSCLK_N, 
+      SYSCLK_P 		=> SYSCLK_P,
         
       PHY_RESET => PHY_RESET,
       -- Asynchronous reset

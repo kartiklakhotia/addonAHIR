@@ -17,7 +17,7 @@ $ahirTemplate = "${templateDir}${l}ahirPorts_inst.v";
 
 
 ########## string patterns ##########
-$riffa2ahir_pat = "__riffa2ahir_slave_instance";
+$riffa2ahir_pat = "__riffa2ahir_instance";
 $ahirSys_pat = "__ahirSys_port_declaration";
 $null_pat = "";
 $txLen_pat = "__out_length_parameter_declaration";

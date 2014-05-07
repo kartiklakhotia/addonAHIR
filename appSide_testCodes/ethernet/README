@@ -1,1 +1,6 @@
 must be root to access eth0 port
+
+### bugs : ethernet also sniffs on sent packets. Was not being taken into account.
+
+Status : Fixed
+	 listening to both the packets now i.e num_recv_packets = 2*num_sent_packets

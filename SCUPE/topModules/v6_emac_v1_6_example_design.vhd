@@ -253,7 +253,6 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
    port (
       rx_usr_clock	  : in  std_logic;
       rx_gtx_clock	  : in  std_logic;
-      ll_clk_i	          : out std_logic;
       rx_ll_reset         : in  std_logic;
       rx_ll_data_in       : in  std_logic_vector(7 downto 0);
       rx_ll_sof_in_n      : in  std_logic;
@@ -460,7 +459,7 @@ begin
       TX_CLK                   => tx_clk,
 
       -- LocalLink receiver interface
-      RX_LL_CLOCK              => ll_clk_i,
+      RX_LL_CLOCK              => usr_clk,
       RX_LL_RESET              => ll_reset_i,
       RX_LL_DATA               => rx_ll_data_i,
       RX_LL_SOF_N              => rx_ll_sof_n_i,
@@ -477,7 +476,7 @@ begin
       EMACCLIENTRXSTATSBYTEVLD => EMACCLIENTRXSTATSBYTEVLD,
 
       -- LocalLink transmitter interface
-      TX_LL_CLOCK              => ll_clk_i,
+      TX_LL_CLOCK              => usr_clk,
       TX_LL_RESET              => ll_reset_i,
       TX_LL_DATA               => tx_ll_data_i,
       TX_LL_SOF_N              => tx_ll_sof_n_i,
@@ -521,7 +520,6 @@ begin
     client_side_asm : address_swap_module_8 port map (
       rx_usr_clock        => usr_clk,
       rx_gtx_clock	  => tx_clk,
-      ll_clk_i		  => ll_clk_i,
       rx_ll_reset         => ll_reset_i,
       rx_ll_data_in       => rx_ll_data_i,
       rx_ll_sof_in_n      => rx_ll_sof_n_i,

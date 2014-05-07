@@ -1,0 +1,134 @@
+Release 14.3 ngdbuild P.40xd (lin)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: /cad/Xilinx/14.3/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild -intstyle
+silent -dd _ngo -nt timestamp -p xc6vlx240t-ff1156-1 -uc
+/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf -sd
+/home/ahir/addonAHIR/SCUPE/implement
+/home/ahir/addonAHIR/SCUPE/implement/results/design.ngc
+
+Reading NGO file "/home/ahir/addonAHIR/SCUPE/implement/results/design.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf" ...
+WARNING:NgdBuild - The value of SIM_DEVICE on instance 'bufr_rx' of type BUFR
+   has been changed from 'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and
+   timing simulation for this primitive.  In order for functional simulation to
+   be correct, the value of SIM_DEVICE should be changed in this same manner in
+   the source netlist or constraint file.
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem - TNM : sysclk was distributed to a DCM but new TNM
+   constraints were not derived. This TNM is used in the following user groups
+   or specifications:
+   <TIMEGRP sysclk_grp = sysclk;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(82)]
+
+WARNING:ConstraintSystem:193 - The TNM 'sysclk', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMs and cannot be actively used by the
+   referencing TimeGrp constraint 'sysclk_grp'. If clock manager blocks are
+   directly or indirectly driven, a new TNM constraint will not be derived since
+   the referencing constraint is not a PERIOD constraint. This TNM is used in
+   the following user group or specification:
+   <TIMEGRP sysclk_grp = sysclk;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(82)]
+
+WARNING:ConstraintSystem:198 - The following user group was removed since the
+   group that it includes was removed:
+   <TIMEGRP sysclk_grp = sysclk;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(82)]
+
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TX_ER IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TX_ER by the
+   constraint <INST "*gmii?GMII_TX_ER"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(152)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_0 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_0 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_1 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_1 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_2 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_2 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_3 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_3 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_4 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_4 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_5 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_5 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_6 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_6 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_7 IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_7 by the
+   constraint <INST "*gmii?GMII_TXD_?"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_
+   6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TX_EN IOB = true> is
+   overridden on the design object
+   v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TX_EN by the
+   constraint <INST "*gmii?GMII_TX_EN"   IOB = true;>
+   [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(151)].
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  14
+
+Total memory usage is 120668 kilobytes
+
+Writing NGD file "design.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "design.bld"...

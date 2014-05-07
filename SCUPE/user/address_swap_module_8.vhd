@@ -74,7 +74,6 @@ entity address_swap_module_8 is
    port (
       rx_usr_clock	  : in  std_logic;
       rx_gtx_clock	  : in  std_logic;
-      ll_clk_i	          : out std_logic; -- Input CLK from TRIMAC Reciever
       rx_ll_reset         : in  std_logic; -- Synchronous reset signal
       rx_ll_data_in       : in  std_logic_vector(7 downto 0); -- Input data
       rx_ll_sof_in_n      : in  std_logic; -- Input start of frame
@@ -138,8 +137,7 @@ begin -- arch1
 -- eth_usr_clk_div must be integer
 -- frequency = (1000/eth_usr_clk_div) MHz 
 -- rx_ll_clock should be same as ll_clk_i. 
-   rx_ll_clock <= rx_usr_clock;
-   ll_clk_i <= rx_ll_clock;
+   rx_ll_clock <= rx_gtx_clock;
    rx_ll_dst_rdy_out_n <= rx_ll_dst_rdy_in_n;    
    data_sr_p : process(rx_ll_clock)
    begin

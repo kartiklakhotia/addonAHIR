@@ -5,7 +5,49 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;core*/pcie_clocking_i/clk_125&quot; TNM_NET = &quot;CLK_125&quot; ;&gt; [/home/ahir/project/SCUPE/finalFW/EthNRiffa/implement/../ucf/pcie.ucf(163)] was not distributed to the output pin TXOUTCLK of block core/pcie_2_0_i/pcie_gt_i/gtx_v6_i/GTXD[0].GTX because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+<msg type="warning" file="NgdBuild" num="0" delta="new" >The value of SIM_DEVICE on instance &apos;<arg fmt="%s" index="1">bufr_rx</arg>&apos; of type <arg fmt="%s" index="2">BUFR</arg> has been changed from &apos;<arg fmt="%s" index="3">VIRTEX4</arg>&apos; to &apos;<arg fmt="%s" index="4">VIRTEX6</arg>&apos; to correct post-ngdbuild and timing simulation for this primitive.  In order for functional simulation to be correct, the value of SIM_DEVICE should be changed in this same manner in the source netlist or constraint file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : sysclk was distributed to a DCM but new TNM constraints were not derived. This TNM is used in the following user groups or specifications:
+&lt;TIMEGRP sysclk_grp = sysclk;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(82)]
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="193" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sysclk</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and cannot be actively used by the referencing <arg fmt="%s" index="3">TimeGrp</arg> constraint &apos;<arg fmt="%s" index="4">sysclk_grp</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived since the referencing constraint is not a PERIOD constraint. This TNM is used in the following user group or specification:
+<arg fmt="%s" index="5">&lt;TIMEGRP sysclk_grp = sysclk;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(82)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="198" delta="old" >The following user group was removed since the group that it includes was removed:
+<arg fmt="%s" index="1">&lt;TIMEGRP sysclk_grp = sysclk;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(82)]</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TX_ER IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TX_ER</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TX_ER&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(152)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_0 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_1 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_1</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_2 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_2</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_3 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_3</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_4 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_4</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_5 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_5</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_6 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_6</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TXD_7 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TXD_7</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TXD_?&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(150)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /v6_emac_v1_6_example_design/EXPANDED/v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst\/v6_emac_v1_6_block_inst\/gmii\/GMII_TX_EN IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii/GMII_TX_EN</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;*gmii?GMII_TX_EN&quot;   IOB = true;&gt; [/home/ahir/addonAHIR/SCUPE/implement/../ucf/ethernet.ucf(151)]</arg>.
 </msg>
 
 </messages>

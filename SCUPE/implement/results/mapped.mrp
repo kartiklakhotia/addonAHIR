@@ -1,0 +1,2739 @@
+Release 14.3 Map P.40xd (lin)
+Xilinx Mapping Report File for Design 'v6_emac_v1_6_example_design'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -xe n -t 3 -xt 0
+-register_duplication off -r 4 -global_opt speed -mt on -detail -ir off -pr off -lc off -power off -o
+/home/ahir/addonAHIR/SCUPE/implement/results/mapped.ncd /home/ahir/addonAHIR/SCUPE/implement/results/design.ngd
+/home/ahir/addonAHIR/SCUPE/implement/results/mapped.pcf 
+Target Device  : xc6vlx240t
+Target Package : ff1156
+Target Speed   : -1
+Mapper Version : virtex6 -- $Revision: 1.55 $
+Mapped Date    : Tue May  6 13:55:44 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   15
+Slice Logic Utilization:
+  Number of Slice Registers:                    97 out of 301,440    1%
+    Number used as Flip Flops:                  96
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        101 out of 150,720    1%
+    Number used as logic:                       95 out of 150,720    1%
+      Number using O6 output only:              64
+      Number using O5 output only:              19
+      Number using O5 and O6:                   12
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  58,400    0%
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    47 out of  37,680    1%
+  Number of LUT Flip Flop pairs used:          126
+    Number with an unused Flip Flop:            34 out of     126   26%
+    Number with an unused LUT:                  25 out of     126   19%
+    Number of fully used LUT-FF pairs:          67 out of     126   53%
+    Number of unique control sets:              14
+    Number of slice register sites lost
+      to control set restrictions:              63 out of 301,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        65 out of     600   10%
+    Number of LOCed IOBs:                       26 out of      65   40%
+    IOB Flip Flops:                             21
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  1 out of     416    1%
+    Number using RAMB36E1 only:                  1
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
+  Number of BUFG/BUFGCTRLs:                      7 out of      32   21%
+    Number used as BUFGs:                        7
+    Number used as BUFGCTRLs:                    0
+  Number of ILOGICE1/ISERDESE1s:                10 out of     720    1%
+    Number used as ILOGICE1s:                   10
+    Number used as ISERDESE1s:                   0
+  Number of OLOGICE1/OSERDESE1s:                11 out of     720    1%
+    Number used as OLOGICE1s:                   11
+    Number used as OSERDESE1s:                   0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFIODQSs:                           1 out of      72    1%
+  Number of BUFRs:                               1 out of      36    2%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         1 out of      18    5%
+  Number of IODELAYE1s:                         11 out of     720    1%
+  Number of MMCM_ADVs:                           1 out of      12    8%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       1 out of       4   25%
+    Number of LOCed TEMAC_SINGLEs:               1 out of       1  100%
+
+Average Fanout of Non-Clock Nets:                2.55
+
+Peak Memory Usage:  520 MB
+Total REAL time to MAP completion:  49 secs 
+Total CPU time to MAP completion (all processors):   49 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:MapLib:41 - All members of TNM group "tx_metastable" have been optimized
+   out of the design.
+WARNING:MapLib:41 - All members of TNM group "tx_addr_wr" have been optimized
+   out of the design.
+WARNING:MapLib:41 - All members of TNM group "tx_addr_rd" have been optimized
+   out of the design.
+WARNING:MapLib:41 - All members of TNM group "tx_fifo_rd_to_wr" have been
+   optimized out of the design.
+WARNING:MapLib:41 - All members of TNM group "tx_fifo_wr_to_rd" have been
+   optimized out of the design.
+WARNING:MapLib:41 - All members of TNM group "rx_metastable" have been optimized
+   out of the design.
+WARNING:MapLib:41 - All members of TNM group "rx_fifo_rd_to_wr" have been
+   optimized out of the design.
+WARNING:MapLib:41 - All members of TNM group "rx_fifo_wr_to_rd" have been
+   optimized out of the design.
+WARNING:MapLib:48 - The timing specification "TS_tx_fifo_rd_to_wr" has been
+   discarded because its FROM group (tx_fifo_rd_to_wr) was optimized away.
+WARNING:MapLib:48 - The timing specification "TS_tx_fifo_wr_to_rd" has been
+   discarded because its FROM group (tx_fifo_wr_to_rd) was optimized away.
+WARNING:MapLib:48 - The timing specification "TS_tx_meta_protect" has been
+   discarded because its FROM group (tx_metastable) was optimized away.
+WARNING:MapLib:47 - The timing specification "TS_tx_fifo_addr" has been
+   discarded because both its FROM group (tx_addr_rd) and TO group (tx_addr_wr)
+   were optimized away.
+WARNING:MapLib:48 - The timing specification "TS_rx_fifo_wr_to_rd" has been
+   discarded because its FROM group (rx_fifo_wr_to_rd) was optimized away.
+WARNING:MapLib:48 - The timing specification "TS_rx_fifo_rd_to_wr" has been
+   discarded because its FROM group (rx_fifo_rd_to_wr) was optimized away.
+WARNING:MapLib:48 - The timing specification "TS_rx_meta_protect" has been
+   discarded because its FROM group (rx_metastable) was optimized away.
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'27000@10.107.90.15'.
+INFO:Security:56 - Part 'xc6vlx240t' is not a WebPack part.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_col_window_pipe<0>
+   has no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<11> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<10> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<9> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<8> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<7> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<6> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<5> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<4> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<3> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<2> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<1> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<0> has no
+   load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<11> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<10> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<9> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<8> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<7> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<6> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<5> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<4> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<3> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<2> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<1> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<0> has
+   no load.
+INFO:LIT:243 - Logical network
+   v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_txfer_tog has no
+   load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 65 IOs, 26 are locked
+   and 39 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 427 block(s) removed
+  32 block(s) optimized away
+ 445 signal(s) removed
+  44 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_col_window_pipe<0>"
+is loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_col_window_pipe_0"
+(FF) removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<11>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_11" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<10>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_10" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<9>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_9" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<8>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_8" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<7>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_7" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<6>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_6" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<5>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_5" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<4>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_4" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<3>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_3" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<2>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_2" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<1>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_1" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr<0>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_rd_addr_0" (FF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<11>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_11" (SFF)
+removed.
+  The signal "lut1601_370" is loadless and has been removed.
+   Loadless block "lut1601_370" (ROM) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count<0>" is
+loadless and has been removed.
+     Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count_0" (SFF)
+removed.
+      The signal "][1210_190" is loadless and has been removed.
+       Loadless block "][1210_190_INV_0" (BUF) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count<1>" is
+loadless and has been removed.
+     Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count_1" (SFF)
+removed.
+      The signal "lut1003_188" is loadless and has been removed.
+       Loadless block "lut1003_188" (ROM) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count<3>" is
+loadless and has been removed.
+     Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count_3" (SFF)
+removed.
+      The signal "lut991_184" is loadless and has been removed.
+       Loadless block "lut991_184" (ROM) removed.
+        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count<2>" is
+loadless and has been removed.
+         Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_16_count_2" (SFF)
+removed.
+          The signal "lut997_186" is loadless and has been removed.
+           Loadless block "lut997_186" (ROM) removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<10>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_10" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<9>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_9" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<8>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_8" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<7>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_7" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<6>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_6" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<5>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_5" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<4>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_4" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<3>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_3" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<2>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_2" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<1>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_1" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer<0>" is
+loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_addr_txfer_0" (SFF)
+removed.
+The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_txfer_tog"
+is loadless and has been removed.
+ Loadless block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_txfer_tog" (FF)
+removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<7>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<7>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_7" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<6>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<6>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_6" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<5>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<5>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_5" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<4>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<4>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_4" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<3>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<3>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_3" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<2>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<2>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_2" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<1>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<1>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_1" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_i<0>" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_r<0>" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_r_0" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_good_frame_i" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_good_frame_r" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_good_frame_r" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_data_valid_r" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_data_valid_r" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_bad_frame_i" is unused and has been
+removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_bad_frame_r" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_bad_frame_r" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_pre_reset_i<5>" is unused and has
+been removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_pre_reset_i_5" (FF) removed.
+  The signal "v6_emac_v1_6_locallink_inst/rx_pre_reset_i<4>" is unused and has
+been removed.
+   Unused block "v6_emac_v1_6_locallink_inst/rx_pre_reset_i_4" (FF) removed.
+    The signal "v6_emac_v1_6_locallink_inst/rx_pre_reset_i<3>" is unused and has
+been removed.
+     Unused block "v6_emac_v1_6_locallink_inst/rx_pre_reset_i_3" (FF) removed.
+      The signal "v6_emac_v1_6_locallink_inst/rx_pre_reset_i<2>" is unused and has
+been removed.
+       Unused block "v6_emac_v1_6_locallink_inst/rx_pre_reset_i_2" (FF) removed.
+        The signal "v6_emac_v1_6_locallink_inst/rx_pre_reset_i<1>" is unused and has
+been removed.
+         Unused block "v6_emac_v1_6_locallink_inst/rx_pre_reset_i_1" (FF) removed.
+          The signal "v6_emac_v1_6_locallink_inst/rx_pre_reset_i<0>" is unused and has
+been removed.
+           Unused block "v6_emac_v1_6_locallink_inst/rx_pre_reset_i_0" (FF) removed.
+The signal "v6_emac_v1_6_locallink_inst/rx_reset_i" is unused and has been
+removed.
+ Unused block "v6_emac_v1_6_locallink_inst/rx_reset_i" (FF) removed.
+The signal "][1105_120" is unused and has been removed.
+The signal "lut798_117" is unused and has been removed.
+ Unused block "lut798_117" (ROM) removed.
+  The signal "lut797_116" is unused and has been removed.
+   Unused block "lut797_116" (ROM) removed.
+    The signal "lut796_115" is unused and has been removed.
+     Unused block "lut796_115" (ROM) removed.
+    The signal "lut795_114" is unused and has been removed.
+     Unused block "lut795_114" (ROM) removed.
+The signal "][1108_122" is unused and has been removed.
+ Unused block "][1108_122_INV_0" (BUF) removed.
+  The signal "lut805_121" is unused and has been removed.
+   Unused block "lut805_121" (ROM) removed.
+The signal "lut811_125" is unused and has been removed.
+ Unused block "lut811_125" (ROM) removed.
+The signal "lut817_128" is unused and has been removed.
+ Unused block "lut817_128" (ROM) removed.
+The signal "][1123_132" is unused and has been removed.
+ Unused block "][1123_132_INV_0" (BUF) removed.
+  The signal "lut823_131" is unused and has been removed.
+   Unused block "lut823_131" (ROM) removed.
+The signal "lut829_135" is unused and has been removed.
+ Unused block "lut829_135" (ROM) removed.
+The signal "][1133_139" is unused and has been removed.
+ Unused block "][1133_139_INV_0" (BUF) removed.
+  The signal "lut835_138" is unused and has been removed.
+   Unused block "lut835_138" (ROM) removed.
+The signal "][1138_143" is unused and has been removed.
+ Unused block "][1138_143_INV_0" (BUF) removed.
+  The signal "lut841_142" is unused and has been removed.
+   Unused block "lut841_142" (ROM) removed.
+The signal "][1143_146" is unused and has been removed.
+ Unused block "][1143_146_INV_0" (BUF) removed.
+The signal "][1294_252" is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_retran_frame_tog" is
+unused and has been removed.
+The signal "][1411_349" is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_tran_frame_tog" is
+unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/frame_in_fifo_sync" is
+unused and has been removed.
+The signal "lut1746_434" is unused and has been removed.
+The signal "lut1752_437" is unused and has been removed.
+ Unused block "lut1752_437" (ROM) removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_col_window_pipe<0>"
+is unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_col_window_pipe_0"
+(FF) removed.
+The signal "][1623_441" is unused and has been removed.
+ Unused block "][1623_441_INV_0" (BUF) removed.
+  The signal "lut1758_440" is unused and has been removed.
+   Unused block "lut1758_440" (ROM) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_col_window_pipe<1>"
+is unused and has been removed.
+     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_col_window_pipe_1"
+(FF) removed.
+The signal "][1638_452" is unused and has been removed.
+The signal "][1642_454" is unused and has been removed.
+ Unused block "][1642_454_INV_0" (BUF) removed.
+  The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_txfer_tog"
+is unused and has been removed.
+   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_txfer_tog" (SFF)
+removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<10>" is unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<10>" (MUX) removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<9>" is unused and has been removed.
+   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<9>" (MUX) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<8>" is unused and has been removed.
+     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<8>" (MUX) removed.
+      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<7>" is unused and has been removed.
+       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<7>" (MUX) removed.
+        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<6>" is unused and has been removed.
+         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<6>" (MUX) removed.
+          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<5>" is unused and has been removed.
+           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<5>" (MUX) removed.
+            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<4>" is unused and has been removed.
+             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<4>" (MUX) removed.
+              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<3>" is unused and has been removed.
+               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<3>" (MUX) removed.
+                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<2>" is unused and has been removed.
+                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<2>" (MUX) removed.
+                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<1>" is unused and has been removed.
+                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<1>" (MUX) removed.
+                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<0>" is unused and has been removed.
+                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_cy<0>" (MUX) removed.
+                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>" is unused
+and has been removed.
+                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>" (ROM)
+removed.
+                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>_bdd10" is
+unused and has been removed.
+                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>61" (ROM)
+removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<6>" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_6" (SFF)
+removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<6>"
+is unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_6"
+(FF) removed.
+                              The signal "lut2766_580" is unused and has been removed.
+                               Unused block "lut2766_580" (ROM) removed.
+                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<6>" is
+unused and has been removed.
+                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_6" (SFF)
+removed.
+                                  The signal "][2055_631" is unused and has been removed.
+                                   Unused block "][2055_631_INV_0" (BUF) removed.
+                                    The signal "lut2903_630" is unused and has been removed.
+                                     Unused block "lut2903_630" (ROM) removed.
+                                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<7>"
+is unused and has been removed.
+                                       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_7"
+(SFF) removed.
+                                        The signal "][2324_5" is unused and has been removed.
+                                         Unused block "][2324_5_INV_0" (BUF) removed.
+                                          The signal "lut398_4" is unused and has been removed.
+                                           Unused block "lut398_4" (ROM) removed.
+                                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_state_FSM_FFd2" is
+unused and has been removed.
+                                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_state_FSM_FFd2" (SFF)
+removed.
+                                              The signal "lut2418_536" is unused and has been removed.
+                                               Unused block "lut2418_536" (ROM) removed.
+                                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_state_FSM_FFd3" is
+unused and has been removed.
+                                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_state_FSM_FFd3" (SFF)
+removed.
+*The signal "][1828_534" is unused and has been removed.
+* Unused block "][1828_534_INV_0" (BUF) removed.
+*  The signal "lut2412_533" is unused and has been removed.
+*   Unused block "lut2412_533" (ROM) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_state_FSM_FFd1" is
+unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_state_FSM_FFd1" (SFF)
+removed.
+*      The signal "lut2405_530" is unused and has been removed.
+*       Unused block "lut2405_530" (ROM) removed.
+*        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_valid_pipe<1>" is
+unused and has been removed.
+*         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_valid_pipe_1" (FF)
+removed.
+*          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_rd_valid_pipe_1"
+is unused and has been removed.
+*    The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/dopb_bram<0>"
+is unused and has been removed.
+*    The signal "lut2411_532" is unused and has been removed.
+*     Unused block "lut2411_532" (ROM) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/frame_in_fifo" is unused
+and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/frame_in_fifo" (SFF)
+removed.
+*        The signal "][2089_657" is unused and has been removed.
+*         Unused block "][2089_657_INV_0" (BUF) removed.
+*          The signal "lut2956_656" is unused and has been removed.
+*           Unused block "lut2956_656" (ROM) removed.
+*            The signal "lut2955_655" is unused and has been removed.
+*             Unused block "lut2955_655" (ROM) removed.
+*              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<5>"
+is unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_5" (SFF)
+removed.
+*                The signal "][1777_510" is unused and has been removed.
+*                 Unused block "][1777_510_INV_0" (BUF) removed.
+*                  The signal "lut2332_509" is unused and has been removed.
+*                   Unused block "lut2332_509" (ROM) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame" is
+unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame" (SFF)
+removed.
+*                      The signal "][1876_549" is unused and has been removed.
+*                       Unused block "][1876_549_INV_0" (BUF) removed.
+*                        The signal "lut2660_548" is unused and has been removed.
+*                         Unused block "lut2660_548" (ROM) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_delay" is
+unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_delay"
+(SFF) removed.
+*                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_sync" is
+unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_sync"
+(SFF) removed.
+*                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_tog" is
+unused and has been removed.
+*                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_tog" (FF)
+removed.
+*                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<5>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<5>"
+(XOR) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<4>"
+is unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<4>"
+(MUX) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<3>"
+is unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<3>"
+(MUX) removed.
+*                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<2>"
+is unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<2>"
+(MUX) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<1>"
+is unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<1>"
+(MUX) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<0>"
+is unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<0>"
+(MUX) removed.
+*                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_rd_pull_f
+rame_AND_30_o_inv" is unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_store_frame_rd_pull_f
+rame_AND_30_o_inv111" (ROM) removed.
+*                            The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<0>"
+is unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_0" (SFF)
+removed.
+*                              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<0>" is
+unused and has been removed.
+*                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<0>"
+(XOR) removed.
+*                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<0>"
+is unused and has been removed.
+*                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<0>"
+(ROM) removed.
+*                          The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<1>"
+is unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_1" (SFF)
+removed.
+*                            The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<1>" is
+unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<1>"
+(XOR) removed.
+*                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<1>"
+is unused and has been removed.
+*                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<1>"
+(ROM) removed.
+*                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<2>"
+is unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_2" (SFF)
+removed.
+*                          The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<2>" is
+unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<2>"
+(XOR) removed.
+*                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<2>"
+is unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<2>"
+(ROM) removed.
+*                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<3>"
+is unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_3" (SFF)
+removed.
+*                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<3>" is
+unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<3>"
+(XOR) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<3>"
+is unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<3>"
+(ROM) removed.
+*                    The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<4>"
+is unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_4" (SFF)
+removed.
+*                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<4>" is
+unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<4>"
+(XOR) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<4>"
+is unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<4>"
+(ROM) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<5>"
+is unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<5>"
+(ROM) removed.
+*              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<6>"
+is unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_6" (SFF)
+removed.
+*                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<6>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<6>"
+(XOR) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<5>"
+is unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<5>"
+(MUX) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<6>"
+is unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<6>"
+(ROM) removed.
+*              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<8>"
+is unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_8" (SFF)
+removed.
+*                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<8>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<8>"
+(XOR) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<7>"
+is unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<7>"
+(MUX) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<6>"
+is unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_cy<6>"
+(MUX) removed.
+*                    The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames<7>"
+is unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_frames_7" (SFF)
+removed.
+*                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<7>" is
+unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_xor<7>"
+(XOR) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<7>"
+is unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_rd_frames_lut<7>"
+(ROM) removed.
+*                  The signal "][522_43" is unused and has been removed.
+*                   Unused block "][522_43_INV_0" (BUF) removed.
+*                    The signal "lut2326_42" is unused and has been removed.
+*                     Unused block "lut2326_42" (ROM) removed.
+*      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_eof_n_int"
+is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_eof_n_int" (SFF)
+removed.
+*        The signal "][2109_670" is unused and has been removed.
+*         Unused block "][2109_670_INV_0" (BUF) removed.
+*          The signal "lut2986_669" is unused and has been removed.
+*           Unused block "lut2986_669" (ROM) removed.
+                                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<7>1"
+is unused and has been removed.
+                                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<7>"
+(XOR) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<6>" is
+unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<6>"
+(MUX) removed.
+                                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<5>" is
+unused and has been removed.
+                                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<5>"
+(MUX) removed.
+                                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<4>" is
+unused and has been removed.
+                                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<4>"
+(MUX) removed.
+                                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<3>" is
+unused and has been removed.
+                                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<3>"
+(MUX) removed.
+*The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<2>" is
+unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<2>"
+(MUX) removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<1>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<1>"
+(MUX) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<0>" is
+unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<0>"
+(MUX) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_reload" is
+unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_reload11" (ROM)
+removed.
+*      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<0>"
+is unused and has been removed.
+*       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_0"
+(SFF) removed.
+*        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<0>1"
+is unused and has been removed.
+*         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<0>"
+(XOR) removed.
+*          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<0>"
+is unused and has been removed.
+*           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<0>"
+(ROM) removed.
+*            The signal "][525_45" is unused and has been removed.
+*             Unused block "][525_45_INV_0" (BUF) removed.
+*              The signal "lut1803_44" is unused and has been removed.
+*               Unused block "lut1803_44" (ROM) removed.
+*    The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<1>"
+is unused and has been removed.
+*     Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_1"
+(SFF) removed.
+*      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<1>1"
+is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<1>"
+(XOR) removed.
+*        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<1>_rt"
+is unused and has been removed.
+*         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<1>_rt"
+(ROM) removed.
+*  The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<2>"
+is unused and has been removed.
+*   Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_2"
+(SFF) removed.
+*    The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<2>1"
+is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<2>"
+(XOR) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<2>"
+is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<2>"
+(ROM) removed.
+*The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<3>"
+is unused and has been removed.
+* Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_3"
+(SFF) removed.
+*  The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<3>1"
+is unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<3>"
+(XOR) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<3>"
+is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<3>"
+(ROM) removed.
+                                                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<4>"
+is unused and has been removed.
+                                                 Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_4"
+(SFF) removed.
+*The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<4>1"
+is unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<4>"
+(XOR) removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<4>"
+is unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<4>"
+(ROM) removed.
+                                              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<5>"
+is unused and has been removed.
+                                               Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_5"
+(SFF) removed.
+                                                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<5>1"
+is unused and has been removed.
+                                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<5>"
+(XOR) removed.
+*The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<5>"
+is unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<5>"
+(ROM) removed.
+                                            The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<6>"
+is unused and has been removed.
+                                             Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_6"
+(SFF) removed.
+                                              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<6>1"
+is unused and has been removed.
+                                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<6>"
+(XOR) removed.
+                                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<6>"
+is unused and has been removed.
+                                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<6>"
+(ROM) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<7>"
+is unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<7>"
+(ROM) removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<7>" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_7" (SFF)
+removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<7>"
+is unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_7"
+(FF) removed.
+                              The signal "lut2760_577" is unused and has been removed.
+                               Unused block "lut2760_577" (ROM) removed.
+                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<7>" is
+unused and has been removed.
+                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_7" (SFF)
+removed.
+                                  The signal "][2051_628" is unused and has been removed.
+                                   Unused block "][2051_628_INV_0" (BUF) removed.
+                                    The signal "lut2897_627" is unused and has been removed.
+                                     Unused block "lut2897_627" (ROM) removed.
+                                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<8>"
+is unused and has been removed.
+                                       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_8"
+(SFF) removed.
+                                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<8>1"
+is unused and has been removed.
+                                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<8>"
+(XOR) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<7>" is
+unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<7>"
+(MUX) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<8>"
+is unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<8>"
+(ROM) removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<8>" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_8" (SFF)
+removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<8>"
+is unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_8"
+(FF) removed.
+                              The signal "lut2754_574" is unused and has been removed.
+                               Unused block "lut2754_574" (ROM) removed.
+                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<8>" is
+unused and has been removed.
+                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_8" (SFF)
+removed.
+                                  The signal "][2047_625" is unused and has been removed.
+                                   Unused block "][2047_625_INV_0" (BUF) removed.
+                                    The signal "lut2891_624" is unused and has been removed.
+                                     Unused block "lut2891_624" (ROM) removed.
+                                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<9>"
+is unused and has been removed.
+                                       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_9"
+(SFF) removed.
+                                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<9>" is
+unused and has been removed.
+                                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<9>"
+(XOR) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<8>" is
+unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<8>"
+(MUX) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<9>"
+is unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<9>"
+(ROM) removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<9>" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_9" (SFF)
+removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<9>"
+is unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_9"
+(FF) removed.
+                              The signal "lut2748_571" is unused and has been removed.
+                               Unused block "lut2748_571" (ROM) removed.
+                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<9>" is
+unused and has been removed.
+                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_9" (SFF)
+removed.
+                                  The signal "][2043_622" is unused and has been removed.
+                                   Unused block "][2043_622_INV_0" (BUF) removed.
+                                    The signal "lut2885_621" is unused and has been removed.
+                                     Unused block "lut2885_621" (ROM) removed.
+                                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<10>"
+is unused and has been removed.
+                                       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_10"
+(SFF) removed.
+                                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<10>"
+is unused and has been removed.
+                                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<10>"
+(XOR) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<9>" is
+unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<9>"
+(MUX) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<10>"
+is unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_lut<10>"
+(ROM) removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<10>" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_10"
+(SFF) removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<10>
+" is unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_10"
+(FF) removed.
+                              The signal "lut2742_568" is unused and has been removed.
+                               Unused block "lut2742_568" (ROM) removed.
+                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<10>" is
+unused and has been removed.
+                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_10" (SFF)
+removed.
+                                  The signal "][2039_619" is unused and has been removed.
+                                   Unused block "][2039_619_INV_0" (BUF) removed.
+                                    The signal "lut2879_618" is unused and has been removed.
+                                     Unused block "lut2879_618" (ROM) removed.
+                                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr<11>"
+is unused and has been removed.
+                                       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_11"
+(SFF) removed.
+                                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Result<11>"
+is unused and has been removed.
+                                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_xor<11>"
+(XOR) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<10>"
+is unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Maccum_rd_addr_cy<10>"
+(MUX) removed.
+                                          The signal "][606_47" is unused and has been removed.
+                                           Unused block "][606_47_INV_0" (BUF) removed.
+                                            The signal "lut1917_46" is unused and has been removed.
+                                             Unused block "lut1917_46" (ROM) removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<11>" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_11"
+(SFF) removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<11>
+" is unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_11"
+(FF) removed.
+                              The signal "lut2736_565" is unused and has been removed.
+                               Unused block "lut2736_565" (ROM) removed.
+                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<11>" is
+unused and has been removed.
+                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_11" (SFF)
+removed.
+                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<5>" is
+unused and has been removed.
+                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_5" (SFF)
+removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<5>"
+is unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_5"
+(FF) removed.
+                            The signal "lut2772_583" is unused and has been removed.
+                             Unused block "lut2772_583" (ROM) removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<5>" is
+unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_5" (SFF)
+removed.
+                                The signal "][2059_634" is unused and has been removed.
+                                 Unused block "][2059_634_INV_0" (BUF) removed.
+                                  The signal "lut2909_633" is unused and has been removed.
+                                   Unused block "lut2909_633" (ROM) removed.
+                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<4>" is
+unused and has been removed.
+                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_4" (SFF)
+removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<4>"
+is unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_4"
+(FF) removed.
+                            The signal "lut2778_586" is unused and has been removed.
+                             Unused block "lut2778_586" (ROM) removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<4>" is
+unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_4" (SFF)
+removed.
+                                The signal "][2063_637" is unused and has been removed.
+                                 Unused block "][2063_637_INV_0" (BUF) removed.
+                                  The signal "lut2915_636" is unused and has been removed.
+                                   Unused block "lut2915_636" (ROM) removed.
+                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<3>" is
+unused and has been removed.
+                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_3" (SFF)
+removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<3>"
+is unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_3"
+(FF) removed.
+                            The signal "lut2784_589" is unused and has been removed.
+                             Unused block "lut2784_589" (ROM) removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<3>" is
+unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_3" (SFF)
+removed.
+                                The signal "][2067_640" is unused and has been removed.
+                                 Unused block "][2067_640_INV_0" (BUF) removed.
+                                  The signal "lut2921_639" is unused and has been removed.
+                                   Unused block "lut2921_639" (ROM) removed.
+                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<2>" is
+unused and has been removed.
+                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_2" (SFF)
+removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<2>"
+is unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_2"
+(FF) removed.
+                            The signal "lut2790_592" is unused and has been removed.
+                             Unused block "lut2790_592" (ROM) removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<2>" is
+unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_2" (SFF)
+removed.
+                                The signal "][2071_643" is unused and has been removed.
+                                 Unused block "][2071_643_INV_0" (BUF) removed.
+                                  The signal "lut2927_642" is unused and has been removed.
+                                   Unused block "lut2927_642" (ROM) removed.
+                        The signal "][317_26" is unused and has been removed.
+                         Unused block "][317_26_INV_0" (BUF) removed.
+                          The signal "lut2436_25" is unused and has been removed.
+                           Unused block "lut2436_25" (ROM) removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<1>" is
+unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_1" (SFF)
+removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<1>"
+is unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_1"
+(FF) removed.
+                                The signal "lut2796_595" is unused and has been removed.
+                                 Unused block "lut2796_595" (ROM) removed.
+                                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<1>" is
+unused and has been removed.
+                                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_1" (SFF)
+removed.
+                                    The signal "][2075_646" is unused and has been removed.
+                                     Unused block "][2075_646_INV_0" (BUF) removed.
+                                      The signal "lut2933_645" is unused and has been removed.
+                                       Unused block "lut2933_645" (ROM) removed.
+                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray<0>" is
+unused and has been removed.
+                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_0" (SFF)
+removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync<0>"
+is unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_sync_0"
+(FF) removed.
+                                The signal "lut2802_598" is unused and has been removed.
+                                 Unused block "lut2802_598" (ROM) removed.
+                                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray<0>" is
+unused and has been removed.
+                                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/rd_addr_gray_0" (SFF)
+removed.
+                                    The signal "][2079_649" is unused and has been removed.
+                                     Unused block "][2079_649_INV_0" (BUF) removed.
+                                      The signal "lut2939_648" is unused and has been removed.
+                                       Unused block "lut2939_648" (ROM) removed.
+                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<0>" is unused and has been removed.
+                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<0>" (ROM) removed.
+                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<0>"
+is unused and has been removed.
+                         Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_0"
+(SFF) removed.
+                          The signal "][1713_483" is unused and has been removed.
+                           Unused block "][1713_483_INV_0" (BUF) removed.
+                            The signal "lut2134_482" is unused and has been removed.
+                             Unused block "lut2134_482" (ROM) removed.
+                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_state_FSM_FFd3" is
+unused and has been removed.
+                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_state_FSM_FFd3" (SFF)
+removed.
+                                The signal "][1820_528" is unused and has been removed.
+                                 Unused block "][1820_528_INV_0" (BUF) removed.
+                                  The signal "lut2399_527" is unused and has been removed.
+                                   Unused block "lut2399_527" (ROM) removed.
+                                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_state_FSM_FFd2" is
+unused and has been removed.
+                                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_state_FSM_FFd2" (FF)
+removed.
+                                      The signal "lut3000_677" is unused and has been removed.
+                                       Unused block "lut3000_677" (ROM) removed.
+                                        The signal "lut2999_676" is unused and has been removed.
+                                         Unused block "lut2999_676" (ROM) removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_state_FSM_FFd1" is
+unused and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_state_FSM_FFd1" (SFF)
+removed.
+                                            The signal "lut2225_506" is unused and has been removed.
+                                             Unused block "lut2225_506" (ROM) removed.
+                                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_gf_pipe<1>" is unused
+and has been removed.
+                                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_gf_pipe_1" (FF)
+removed.
+                                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_gf_pipe_1" is
+unused and has been removed.
+                                              The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_fifo_full"
+is unused and has been removed.
+                                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_fifo_full" (FF)
+removed.
+                                                The signal "lut3013_684" is unused and has been removed.
+                                                 Unused block "lut3013_684" (ROM) removed.
+*The signal "lut3012_683" is unused and has been removed.
+* Unused block "lut3012_683" (ROM) removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<7>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_7" (SFF)
+removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<7>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<7>" (XOR) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<7>" is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<7>" (ROM) removed.
+*        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<7>"
+is unused and has been removed.
+*         Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_7"
+(SFF) removed.
+*          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr7" is
+unused and has been removed.
+*           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<7>"
+(XOR) removed.
+*            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<6>" is
+unused and has been removed.
+*             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<6>"
+(MUX) removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<5>" is
+unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<5>"
+(MUX) removed.
+*                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<4>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<4>"
+(MUX) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<3>" is
+unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<3>"
+(MUX) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<2>" is
+unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<2>"
+(MUX) removed.
+*                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<1>" is
+unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<1>"
+(MUX) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<0>" is
+unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<0>"
+(MUX) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_reload_inv" is
+unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_reload_inv11"
+(ROM) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<0>"
+is unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<0>"
+(ROM) removed.
+*                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<0>" is
+unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_0" (SFF)
+removed.
+*                              The signal "lut2816_605" is unused and has been removed.
+*                               Unused block "lut2816_605" (ROM) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<1>"
+is unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<1>"
+(ROM) removed.
+*                          The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<1>"
+is unused and has been removed.
+*                           Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_1"
+(SFF) removed.
+*                            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr1" is
+unused and has been removed.
+*                             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<1>"
+(XOR) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<1>" is
+unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_1" (SFF)
+removed.
+*                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<2>"
+is unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<2>"
+(ROM) removed.
+*                        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<2>"
+is unused and has been removed.
+*                         Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_2"
+(SFF) removed.
+*                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr2" is
+unused and has been removed.
+*                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<2>"
+(XOR) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<2>" is
+unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_2" (SFF)
+removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<3>"
+is unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<3>"
+(ROM) removed.
+*                      The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<3>"
+is unused and has been removed.
+*                       Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_3"
+(SFF) removed.
+*                        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr3" is
+unused and has been removed.
+*                         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<3>"
+(XOR) removed.
+*                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<3>" is
+unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_3" (SFF)
+removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<4>"
+is unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<4>"
+(ROM) removed.
+*                    The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<4>"
+is unused and has been removed.
+*                     Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_4"
+(SFF) removed.
+*                      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr4" is
+unused and has been removed.
+*                       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<4>"
+(XOR) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<4>" is
+unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_4" (SFF)
+removed.
+*                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<5>"
+is unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<5>"
+(ROM) removed.
+*                  The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<5>"
+is unused and has been removed.
+*                   Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_5"
+(SFF) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr5" is
+unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<5>"
+(XOR) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<5>" is
+unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_5" (SFF)
+removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<6>"
+is unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<6>"
+(ROM) removed.
+*                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<6>"
+is unused and has been removed.
+*                 Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_6"
+(SFF) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr6" is
+unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<6>"
+(XOR) removed.
+*                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<6>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_6" (SFF)
+removed.
+*            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<7>"
+is unused and has been removed.
+*             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<7>"
+(ROM) removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<7>" is
+unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_7" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<9>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_9" (SFF)
+removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<9>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<9>" (XOR) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<9>" is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<9>" (ROM) removed.
+*        The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<9>"
+is unused and has been removed.
+*         Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_9"
+(SFF) removed.
+*          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr9" is
+unused and has been removed.
+*           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<9>"
+(XOR) removed.
+*            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<8>" is
+unused and has been removed.
+*             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<8>"
+(MUX) removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<7>" is
+unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<7>"
+(MUX) removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<8>"
+is unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<8>"
+(ROM) removed.
+*                The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<8>"
+is unused and has been removed.
+*                 Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_8"
+(SFF) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr8" is
+unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<8>"
+(XOR) removed.
+*                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<8>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_8" (SFF)
+removed.
+*            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<9>"
+is unused and has been removed.
+*             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<9>"
+(ROM) removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<9>" is
+unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_9" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<11>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_11" (SFF)
+removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<11>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<11>" (XOR) removed.
+*      The signal "][689_49" is unused and has been removed.
+*       Unused block "][689_49_INV_0" (BUF) removed.
+*        The signal "lut2580_48" is unused and has been removed.
+*         Unused block "lut2580_48" (ROM) removed.
+*          The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<11>"
+is unused and has been removed.
+*           Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_11"
+(SFF) removed.
+*            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr11" is
+unused and has been removed.
+*             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<11>"
+(XOR) removed.
+*              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<10>"
+is unused and has been removed.
+*               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<10>"
+(MUX) removed.
+*                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<9>" is
+unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_cy<9>"
+(MUX) removed.
+*                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<10>"
+is unused and has been removed.
+*                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_lut<10>"
+(ROM) removed.
+*                  The signal "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr<10>"
+is unused and has been removed.
+*                   Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_10"
+(SFF) removed.
+*                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr10" is
+unused and has been removed.
+*                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<10>"
+(XOR) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<10>" is
+unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_10" (SFF)
+removed.
+*              The signal "][463_41" is unused and has been removed.
+*               Unused block "][463_41_INV_0" (BUF) removed.
+*                The signal "lut2128_40" is unused and has been removed.
+*                 Unused block "lut2128_40" (ROM) removed.
+*                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr<11>" is
+unused and has been removed.
+*                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_start_addr_11" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<10>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_10" (SFF)
+removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<10>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<10>" (XOR) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<10>" is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<10>" (ROM) removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<2>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_2" (SFF)
+removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<2>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<2>" (XOR) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<2>" is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<2>" (ROM) removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<3>" is
+unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_3" (SFF)
+removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<3>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<3>" (XOR) removed.
+*      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<3>" is unused and has been removed.
+*       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<3>" (ROM) removed.
+*The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<4>" is
+unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_4" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<4>" is unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<4>" (XOR) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<4>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<4>" (ROM) removed.
+*The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<5>" is
+unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_5" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<5>" is unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<5>" (XOR) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<5>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<5>" (ROM) removed.
+*The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<8>" is
+unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_8" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<8>" is unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<8>" (XOR) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<8>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<8>" (ROM) removed.
+*The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff<6>" is
+unused and has been removed.
+* Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff_6" (SFF)
+removed.
+*  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_GND_143
+_o_mux_86_OUT<6>" is unused and has been removed.
+*   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_xor<6>" (XOR) removed.
+*    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<6>" is unused and has been removed.
+*     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<6>" (ROM) removed.
+                                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_bf_pipe<1>" is unused
+and has been removed.
+                                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_bf_pipe_1" (FF)
+removed.
+                                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_bf_pipe_1" is
+unused and has been removed.
+                                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_eof_bram_0" is unused
+and has been removed.
+                                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_eof_bram_0" (FF)
+removed.
+                                            The signal "lut3006_680" is unused and has been removed.
+                                             Unused block "lut3006_680" (ROM) removed.
+                                              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_dv_pipe<1>" is unused
+and has been removed.
+                                               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_dv_pipe_1" (FF)
+removed.
+                                                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_dv_pipe<0>" is unused
+and has been removed.
+                                                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_dv_pipe_0" (FF)
+removed.
+                          The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr" is
+unused and has been removed.
+                           Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mcount_wr_addr_xor<0>"
+(XOR) removed.
+                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<1>" is unused
+and has been removed.
+                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<1>1" (ROM)
+removed.
+                    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<1>" is unused and has been removed.
+                     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_GN
+D_143_o_mux_86_OUT_lut<1>" (ROM) removed.
+                  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<2>" is unused
+and has been removed.
+                   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<2>1" (ROM)
+removed.
+                The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<3>" is unused
+and has been removed.
+                 Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<3>1" (ROM)
+removed.
+              The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<4>" is unused
+and has been removed.
+               Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<4>1" (ROM)
+removed.
+            The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<5>" is unused
+and has been removed.
+             Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<5>1" (ROM)
+removed.
+        The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<7>" is unused
+and has been removed.
+         Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<7>1" (ROM)
+removed.
+      The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<8>" is unused
+and has been removed.
+       Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<8>1" (ROM)
+removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<9>" is unused
+and has been removed.
+     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<9>1" (ROM)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<10>" is
+unused and has been removed.
+   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_rd_addr<10>1" (ROM)
+removed.
+The signal "][2097_662" is unused and has been removed.
+ Unused block "][2097_662_INV_0" (BUF) removed.
+  The signal "lut2968_661" is unused and has been removed.
+   Unused block "lut2968_661" (ROM) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_retran_frame_tog" is
+unused and has been removed.
+     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_retran_frame_tog"
+(SFF) removed.
+The signal "lut2974_664" is unused and has been removed.
+ Unused block "lut2974_664" (ROM) removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_tran_frame_tog" is
+unused and has been removed.
+   Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/rd_tran_frame_tog" (SFF)
+removed.
+The signal "][2105_667" is unused and has been removed.
+ Unused block "][2105_667_INV_0" (BUF) removed.
+  The signal "lut2980_666" is unused and has been removed.
+   Unused block "lut2980_666" (ROM) removed.
+    The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_store_frame_tog" is
+unused and has been removed.
+     Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_store_frame_tog"
+(SFF) removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<7>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_7" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_7"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<6>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_6" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_6"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<5>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_5" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_5"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<4>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_4" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_4"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<3>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_3" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_3"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<2>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_2" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_2"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<1>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_1" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_1"
+is unused and has been removed.
+The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram<0>" is
+unused and has been removed.
+ Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/wr_data_bram_0" (FF)
+removed.
+  The signal
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_0"
+is unused and has been removed.
+The signal "lut439_7" is unused and has been removed.
+ Unused block "lut439_7" (ROM) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_rd_valid_pipe_1"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_bf_pipe_1"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_0"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_1"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_2"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_3"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_4"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_5"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_6"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_data_bram_7"
+(SRLC16E) removed.
+Unused block
+"v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/Mshreg_wr_gf_pipe_1"
+(SRLC16E) removed.
+Unused block "v6_emac_v1_6_locallink_inst/client_side_FIFO/rx_fifo_i/ramgen"
+(RAMB36E1) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+INV 		][1105_120_INV_0
+INV 		][1294_252_INV_0
+INV 		][1411_349_INV_0
+INV 		][1638_452_INV_0
+LUT2 		lut1144_251
+   optimized to 1
+LUT2 		lut1414_348
+   optimized to 1
+LUT2 		lut1746_434
+   optimized to 0
+LUT4 		lut1779_450
+   optimized to 1
+LUT6 		lut1780_451
+   optimized to 1
+LUT2 		lut802_119
+   optimized to 1
+FDR 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/frame_in_fifo
+   optimized to 0
+FD 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/frame_in_fifo_sync
+   optimized to 0
+FDR 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frame_in_fifo
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_0
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_1
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_2
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_3
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_4
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_5
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_6
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_7
+   optimized to 0
+FDRE 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_frames_8
+   optimized to 0
+FDR
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_retran_frame_delay
+   optimized to 0
+FDR
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_retran_frame_sync
+   optimized to 0
+FD 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_retran_frame_tog
+   optimized to 0
+FDR 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_retransmit_frame
+   optimized to 0
+FDR 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_tran_frame_delay
+   optimized to 0
+FDR 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_tran_frame_sync
+   optimized to 0
+FD 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_tran_frame_tog
+   optimized to 0
+FDR 		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/wr_transmit_frame
+   optimized to 0
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<8>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<7>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<6>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<5>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<4>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<3>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<2>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_cy
+<1>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Msub_GND_142_o_GND_142_
+o_sub_104_OUT<11:0>_cy<0>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<10>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<9>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<8>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<7>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<6>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<5>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<4>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<3>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<2>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_cy<1>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Mcount_rd_slot_timer_xo
+r<9>_rt
+LUT1
+		v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i/Madd_rd_addr[11]_GND_14
+2_o_add_80_OUT_xor<11>_rt
+INV 		][1149_152_INV_0
+INV 		][1150_156_INV_0
+INV 		][1214_193_INV_0
+INV 		][1218_197_INV_0
+INV 		][1227_204_INV_0
+INV 		][1309_261_INV_0
+INV 		][1311_264_INV_0
+INV 		][1314_266_INV_0
+INV 		][1319_270_INV_0
+INV 		][1324_274_INV_0
+INV 		][1329_278_INV_0
+INV 		][1334_282_INV_0
+INV 		][1339_286_INV_0
+INV 		][1475_364_INV_0
+INV 		][1559_394_INV_0
+INV 		][1562_396_INV_0
+INV 		][1567_400_INV_0
+INV 		][1572_404_INV_0
+INV 		][1577_408_INV_0
+INV 		][1582_412_INV_0
+INV 		][1587_416_INV_0
+INV 		][1592_420_INV_0
+INV 		][1597_424_INV_0
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLIENTEMACPAUSEREQ                 | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<0>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<1>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<2>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<3>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<4>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<5>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<6>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<7>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<8>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<9>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<10>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<11>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<12>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<13>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<14>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACPAUSEVAL<15>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<0>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<1>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<2>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<3>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<4>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<5>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<6>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CLIENTEMACTXIFGDELAY<7>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| EMACCLIENTRXDVLD                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXFRAMEDROP              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<0>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<1>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<2>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<3>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<4>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<5>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATS<6>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATSBYTEVLD           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTRXSTATSVLD               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTTXSTATS                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTTXSTATSBYTEVLD           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| EMACCLIENTTXSTATSVLD               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| GMII_RXD<0>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<1>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<2>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<3>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<4>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<5>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<6>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD<7>                        | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RX_CLK                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          | FIXED    |
+| GMII_RX_DV                         | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_RX_ER                         | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_TXD<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TXD<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TX_CLK                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+| GMII_TX_EN                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| GMII_TX_ER                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| PHY_RESET                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| RESET                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| SYSCLK_N                           | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| SYSCLK_P                           | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+MMCM_ADV "clk_wiz/mmcm_adv_inst":
+BANDWIDTH:OPTIMIZED
+CASC_LOCK_EN:FALSE
+CLKBURST_ENABLE:FALSE
+CLKBURST_REPEAT:FALSE
+CLKFBIN_EDGE:FALSE
+CLKFBIN_NOCOUNT:TRUE
+CLKFBOUT_EDGE:FALSE
+CLKFBOUT_EN:TRUE
+CLKFBOUT_FRAC_EN:FALSE
+CLKFBOUT_FRAC_WF:FALSE
+CLKFBOUT_NOCOUNT:TRUE
+CLKFBOUT_USE_FINE_PS:FALSE
+CLKOUT0_EDGE:FALSE
+CLKOUT0_EN:FALSE
+CLKOUT0_FRAC_EN:FALSE
+CLKOUT0_FRAC_WF:FALSE
+CLKOUT0_NOCOUNT:TRUE
+CLKOUT0_USE_FINE_PS:FALSE
+CLKOUT1_EDGE:FALSE
+CLKOUT1_EN:FALSE
+CLKOUT1_NOCOUNT:TRUE
+CLKOUT1_USE_FINE_PS:FALSE
+CLKOUT2_EDGE:FALSE
+CLKOUT2_EN:FALSE
+CLKOUT2_NOCOUNT:TRUE
+CLKOUT2_USE_FINE_PS:FALSE
+CLKOUT3_EDGE:FALSE
+CLKOUT3_EN:FALSE
+CLKOUT3_NOCOUNT:TRUE
+CLKOUT3_USE_FINE_PS:FALSE
+CLKOUT4_CASCADE:FALSE
+CLKOUT4_EDGE:FALSE
+CLKOUT4_EN:FALSE
+CLKOUT4_NOCOUNT:TRUE
+CLKOUT4_USE_FINE_PS:FALSE
+CLKOUT5_EDGE:FALSE
+CLKOUT5_EN:FALSE
+CLKOUT5_FRAC_WF:FALSE
+CLKOUT5_NOCOUNT:TRUE
+CLKOUT5_USE_FINE_PS:FALSE
+CLKOUT6_EDGE:FALSE
+CLKOUT6_EN:FALSE
+CLKOUT6_FRAC_WF:FALSE
+CLKOUT6_NOCOUNT:TRUE
+CLKOUT6_USE_FINE_PS:FALSE
+CLOCK_HOLD:FALSE
+COMPENSATION:ZHOLD
+DIRECT_PATH_CNTRL:FALSE
+DIVCLK_EDGE:FALSE
+DIVCLK_NOCOUNT:TRUE
+EN_VCO_DIV1:FALSE
+EN_VCO_DIV6:FALSE
+GTS_WAIT:FALSE
+HVLF_CNT_TEST_EN:FALSE
+HVLF_STEP:FALSE
+IN_DLY_EN:TRUE
+MMCM_EN:TRUE
+PERF0_USE_CLK:FALSE
+PERF1_USE_CLK:FALSE
+PERF2_USE_CLK:FALSE
+PERF3_USE_CLK:FALSE
+SEL_SLIPD:FALSE
+STARTUP_WAIT:FALSE
+VLF_HIGH_DIS_B:TRUE
+VLF_HIGH_PWDN_B:TRUE
+CLKFBOUT_MULT_F = 5.0
+CLKFBOUT_PHASE = 0.0
+CLKIN1_PERIOD = 5
+CLKIN2_PERIOD = 0
+CLKOUT0_DIVIDE_F = 8.0
+CLKOUT0_DUTY_CYCLE = 0.5
+CLKOUT0_PHASE = 0.0
+CLKOUT1_DIVIDE = 5
+CLKOUT1_DUTY_CYCLE = 0.5
+CLKOUT1_PHASE = 0.0
+CLKOUT2_DIVIDE = 8
+CLKOUT2_DUTY_CYCLE = 0.5
+CLKOUT2_PHASE = 0.0
+CLKOUT3_DIVIDE = 1
+CLKOUT3_DUTY_CYCLE = 0.5
+CLKOUT3_PHASE = 0.0
+CLKOUT4_DIVIDE = 1
+CLKOUT4_DUTY_CYCLE = 0.5
+CLKOUT4_PHASE = 0.0
+CLKOUT5_DIVIDE = 1
+CLKOUT5_DUTY_CYCLE = 0.5
+CLKOUT5_PHASE = 0.0
+CLKOUT6_DIVIDE = 1
+CLKOUT6_DUTY_CYCLE = 0.5
+CLKOUT6_PHASE = 0.0
+DIVCLK_DIVIDE = 1
+REF_JITTER1 = 0.01
+REF_JITTER2 = 0.0
+
+
+
+Section 12 - Control Set Information
+------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal                                | Reset Signal                           | Set Signal | Enable Signal | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK | clk_wiz/mmcm_adv_inst_ML_NEW_OUT_0     |            |               | 2                | 2              |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| refclk_bufg_i                               | reset_i                                |            |               | 3                | 12             |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| tx_clk                                      |                                        |            |               | 2                | 2              |
+| tx_clk                                      |                                        |            | ][1227_204    | 3                | 8              |
+| tx_clk                                      |                                        |            | lut376_2      | 2                | 10             |
+| tx_clk                                      | ][1149_152                             |            | ][1150_156    | 3                | 10             |
+| tx_clk                                      | ][1631_445                             |            |               | 1                | 2              |
+| tx_clk                                      | reset_i                                |            |               | 3                | 7              |
+| tx_clk                                      | v6_emac_v1_6_locallink_inst/tx_reset_i |            |               | 5                | 6              |
+| tx_clk                                      | v6_emac_v1_6_locallink_inst/tx_reset_i |            | ][1311_264    | 4                | 12             |
+| tx_clk                                      | v6_emac_v1_6_locallink_inst/tx_reset_i |            | ][1559_394    | 4                | 12             |
+| tx_clk                                      | v6_emac_v1_6_locallink_inst/tx_reset_i |            | lut376_2      | 3                | 12             |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ~clk_wiz/mmcm_adv_inst_ML_NEW_I1            |                                        |            |               | 1                | 1              |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ~clk_wiz/mmcm_adv_inst_ML_NEW_OUT           | clk_wiz/mmcm_adv_inst_ML_NEW_OUT_0     |            |               | 1                | 1              |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                       | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48E1 | BUFG  | BUFIO | BUFR  | MMCM_ADV  | Full Hierarchical Name                                                                             |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| v6_emac_v1_6_example_design/ |           | 27/60         | 12/93         | 58/97         | 0/0           | 0/1       | 0/0     | 3/7   | 0/0   | 1/1   | 0/1       | v6_emac_v1_6_example_design                                                                        |
+| +clk_wiz                     |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 4/4   | 0/0   | 0/0   | 1/1       | v6_emac_v1_6_example_design/clk_wiz                                                                |
+| +v6_emac_v1_6_locallink_inst |           | 3/33          | 7/81          | 0/39          | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst                                            |
+| ++client_side_FIFO           |           | 0/30          | 0/74          | 0/39          | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst/client_side_FIFO                           |
+| +++tx_fifo_i                 |           | 30/30         | 74/74         | 39/39         | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst/client_side_FIFO/tx_fifo_i                 |
+| ++v6_emac_v1_6_block_inst    |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst                    |
+| +++gmii                      |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/gmii               |
+| +++v6_emac_v1_6_inst         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | v6_emac_v1_6_example_design/v6_emac_v1_6_locallink_inst/v6_emac_v1_6_block_inst/v6_emac_v1_6_inst  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

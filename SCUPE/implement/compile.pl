@@ -108,7 +108,7 @@ $BITGEN_OPTIONS   = "-w -f bitgen.ut";
 &run_ngdbuild;
 &run_map;
 &run_par;
-&run_trce;
+#&run_trce;
 &run_bitgen;
 print ("\n bitfile succesfully generated\n\n");
 

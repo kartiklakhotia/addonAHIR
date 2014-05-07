@@ -1,8 +1,0 @@
-Release 14.3 Drc P.40xd (lin)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Tue May  6 13:57:27 2014
-
-drc -z /home/ahir/addonAHIR/SCUPE/implement/results/routed.ncd
-
-DRC detected 0 errors and 0 warnings.

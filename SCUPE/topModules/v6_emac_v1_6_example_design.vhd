@@ -343,8 +343,8 @@ architecture TOP_LEVEL of v6_emac_v1_6_example_design is
 -- Main body of code
 -------------------------------------------------------------------------------
 
-begin
-
+begin 
+    ll_clk_i <= tx_clk;
     -- Reset input buffer
     reset_ibuf : IBUF port map (
       I => RESET,

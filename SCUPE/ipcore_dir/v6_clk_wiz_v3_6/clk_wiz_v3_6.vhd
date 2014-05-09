@@ -158,7 +158,9 @@ begin
     REF_JITTER1          => 0.010,
     CLKOUT2_DIVIDE	 => usr_clk_div,
     CLKOUT2_PHASE	 => 0.000,
-    CLKOUT2_DUTY_CYCLE	 => 0.500)
+    CLKOUT2_DUTY_CYCLE	 => 0.500,
+    CLKOUT2_USE_FINE_PS  => FALSE
+)
   port map
     -- Output clocks
    (CLKFBOUT            => clkfbout,

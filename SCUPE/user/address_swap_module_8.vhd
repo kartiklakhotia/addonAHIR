@@ -137,7 +137,7 @@ begin -- arch1
 -- eth_usr_clk_div must be integer
 -- frequency = (1000/eth_usr_clk_div) MHz 
 -- rx_ll_clock should be same as ll_clk_i. 
-   rx_ll_clock <= rx_gtx_clock;
+   rx_ll_clock <= rx_usr_clock;
    rx_ll_dst_rdy_out_n <= rx_ll_dst_rdy_in_n;    
    data_sr_p : process(rx_ll_clock)
    begin

@@ -94,7 +94,7 @@ close (MYFILE);
 ######### OPTIONS FOR GENERATING BITSTREAM #########
 $NGDBUILD_OPTIONS = "-intstyle silent -dd _ngo -nt timestamp -p xc6vlx240t-ff1156-1"; 
 
-$MAP_OPTIONS      = "-intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -xe n -t 3 -xt 0 -register_duplication on -r 4 -global_opt speed -mt on -detail -ir off -pr off -lc off -power off"; 
+$MAP_OPTIONS      = "-intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -xe n -t 3 -xt 0 -register_duplication off -r 4 -global_opt speed -mt on -detail -ir off -pr off -lc off -power off"; 
 
 $PAR_OPTIONS      = "-w -intstyle ise -ol high"; 
 

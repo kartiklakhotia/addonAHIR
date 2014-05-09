@@ -39,8 +39,8 @@ module chnl_tester #(
 
 
 
-wire [(C_PCI_DATA_WIDTH-1*C_NUM_CHNL):0] rData;
-wire [(C_PCI_DATA_WIDTH-1*C_NUM_CHNL):0] tData;
+wire [(C_PCI_DATA_WIDTH*C_NUM_CHNL)-1:0] rData;
+wire [(C_PCI_DATA_WIDTH*C_NUM_CHNL)-1:0] tData;
 
 
 ////// AHIR SYSTEM SIGNALS //////

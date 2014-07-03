@@ -143,6 +143,15 @@ sub ahirSysInstantiate
 	{
 		my $chnlIndex = "$i";
 		my $portCount = 0;
+		my $thisNumPorts = $numPorts;
+		if ($in_pipe_names[$i] eq $null_pat)
+		{
+			$thisNumPorts = $thisNumPorts - 3;
+		}
+		if ($out_pipe_names[$i] eq $null_pat)
+		{
+			$thisNumPorts = $thisNumPorts - 3;
+		}
 		foreach(@ahirSys)
 		{
 			$portCount = $portCount + 1;
@@ -155,7 +164,7 @@ sub ahirSysInstantiate
 				$toPrintLine =~ s/${outPipe_pat}/$out_pipe_names[$i]/g;
 				$toPrintLine =~ s/${chnlIndex_pat}/${chnlIndex}/g;			
 				print OUTFILE "$toPrintLine";
-				if ($portCount == $numPorts)
+				if ($portCount == $thisNumPorts)
 				{
 					if ($i == $num_chnls - 1)
 					{
@@ -168,7 +177,7 @@ sub ahirSysInstantiate
 				}
 				else
 				{
-					print OUTFILE "\n";
+					print OUTFILE ",\n";
 				}
 			}
 		}		
